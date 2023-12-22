@@ -24,10 +24,10 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>230</x>
       <y>230</y>
-      <width>551</width>
-      <height>331</height>
+      <width>521</width>
+      <height>371</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -38,55 +38,100 @@
     background-color: #31304D; 
 }</string>
     </property>
-    <widget class="QLabel" name="Userlabel">
+    <widget class="QWidget" name="horizontalLayoutWidget">
      <property name="geometry">
       <rect>
-       <x>110</x>
-       <y>80</y>
-       <width>91</width>
-       <height>20</height>
+       <x>150</x>
+       <y>230</y>
+       <width>241</width>
+       <height>51</height>
       </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
-    font-size: 20px;
-    color: #B6BBC4;
-    border : 0;
-	background-color: transparent;
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="LoginButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/* Estilo para los botones (QPushButton) */
+
+QPushButton {
+    font-size: 16px;
+    background-color: #F0ECE5; /* Fondo marrón */
+    color: black; /* Texto color negro */
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+/* Cambio de color al pasar el ratón sobre el botón */
+QPushButton:hover {
+    background-color: #31304D; 
+    color: white; 
+	border : 1px solid #F0ECE5;
+    border-radius: 5px;
 }</string>
-     </property>
-     <property name="text">
-      <string>User</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="PassWordlabel">
-     <property name="geometry">
-      <rect>
-       <x>110</x>
-       <y>170</y>
-       <width>91</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
-    font-size: 20px;
-    color: #B6BBC4;
-    border : 0;
-	background-color: transparent;
+        </property>
+        <property name="text">
+         <string>Login</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/* Estilo para los botones (QPushButton) */
+QPushButton {
+    font-size: 16px;
+    background-color: #F0ECE5; /* Fondo marrón */
+    color: black; /* Texto color negro */
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+/* Cambio de color al pasar el ratón sobre el botón */
+QPushButton:hover {
+    background-color: #31304D; 
+    color: white; 
+	border : 1px solid #F0ECE5;
+    border-radius: 5px;
 }</string>
-     </property>
-     <property name="text">
-      <string>PassWord</string>
-     </property>
+        </property>
+        <property name="text">
+         <string>Anuler</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
     <widget class="QLineEdit" name="UserlineEdit">
      <property name="geometry">
       <rect>
-       <x>260</x>
+       <x>160</x>
        <y>80</y>
-       <width>113</width>
-       <height>28</height>
+       <width>231</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -104,15 +149,18 @@ QLineEdit:hover{
 	border : 2px solid #B6BBC4;
     
 }</string>
+     </property>
+     <property name="placeholderText">
+      <string>Username</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="PassWordlineEdit">
      <property name="geometry">
       <rect>
-       <x>260</x>
-       <y>160</y>
-       <width>113</width>
-       <height>28</height>
+       <x>160</x>
+       <y>130</y>
+       <width>231</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -131,94 +179,27 @@ QLineEdit:hover{
     
 }</string>
      </property>
-    </widget>
-    <widget class="QPushButton" name="LoginButton">
-     <property name="geometry">
-      <rect>
-       <x>90</x>
-       <y>260</y>
-       <width>83</width>
-       <height>41</height>
-      </rect>
+     <property name="inputMethodHints">
+      <set>Qt::ImhHiddenText</set>
      </property>
-     <property name="styleSheet">
-      <string notr="true">/* Estilo para los botones (QPushButton) */
-QPushButton {
-    font-size: 16px;
-    background-color: #F0ECE5; /* Fondo marrón */
-    color: black; /* Texto color negro */
-    border: none;
-    border-radius: 0;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Transición suave */
-}
-
-/* Cambio de color al pasar el ratón sobre el botón */
-QPushButton:hover {
-    background-color: #31304D; 
-    color: white; 
-	border : 1px solid #F0ECE5;
-    border-radius: 5px;
-}</string>
-     </property>
-     <property name="text">
-      <string>Login</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton">
-     <property name="geometry">
-      <rect>
-       <x>190</x>
-       <y>260</y>
-       <width>83</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">/* Estilo para los botones (QPushButton) */
-QPushButton {
-    font-size: 16px;
-    background-color: #F0ECE5; /* Fondo marrón */
-    color: black; /* Texto color negro */
-    border: none;
-    border-radius: 0;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Transición suave */
-}
-
-/* Cambio de color al pasar el ratón sobre el botón */
-QPushButton:hover {
-    background-color: #31304D; 
-    color: white; 
-	border : 1px solid #F0ECE5;
-    border-radius: 5px;
-}</string>
-     </property>
-     <property name="text">
-      <string>Anuler</string>
+     <property name="placeholderText">
+      <string>Password</string>
      </property>
     </widget>
    </widget>
    <widget class="QLabel" name="titre">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>20</y>
-      <width>81</width>
+      <x>390</x>
+      <y>170</y>
+      <width>221</width>
       <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel {
-    font-size: 25px;
+	font: 700 26pt &quot;Times New Roman&quot;;
+    font-size: 35px;
     color: #161A30;
     border : 0;
 	background-color: transparent;
@@ -226,6 +207,9 @@ QPushButton:hover {
     </property>
     <property name="text">
      <string>LOGIN</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>

@@ -95,3 +95,9 @@ void ClientWindow::on_CommandeButton_clicked()
     ui->stackedWidget->setCurrentIndex(2);
 }
 
+
+void ClientWindow::on_Commande_customContextMenuRequested(const QPoint &pos)
+{
+
+}
+

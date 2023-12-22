@@ -17,14 +17,14 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>10</y>
-      <width>771</width>
-      <height>521</height>
+      <x>120</x>
+      <y>40</y>
+      <width>881</width>
+      <height>541</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="ClientPage">
      <widget class="QTableView" name="ClienttableView">
@@ -32,8 +32,8 @@
        <rect>
         <x>10</x>
         <y>30</y>
-        <width>751</width>
-        <height>391</height>
+        <width>851</width>
+        <height>401</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -63,9 +63,9 @@ QTableView::item:selected {
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>250</x>
+        <x>100</x>
         <y>460</y>
-        <width>421</width>
+        <width>571</width>
         <height>51</height>
        </rect>
       </property>
@@ -218,8 +218,8 @@ QPushButton:hover {
        <rect>
         <x>10</x>
         <y>30</y>
-        <width>731</width>
-        <height>381</height>
+        <width>861</width>
+        <height>421</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -249,9 +249,9 @@ QTableView::item:selected {
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>230</x>
-        <y>460</y>
-        <width>359</width>
+        <x>80</x>
+        <y>490</y>
+        <width>631</width>
         <height>37</height>
        </rect>
       </property>
@@ -382,46 +382,281 @@ QPushButton:hover {
      </widget>
     </widget>
     <widget class="QWidget" name="Commande">
-     <widget class="QTableView" name="tableView">
+     <widget class="QWidget" name="horizontalLayoutWidget">
       <property name="geometry">
        <rect>
-        <x>145</x>
-        <y>20</y>
-        <width>601</width>
-        <height>311</height>
+        <x>10</x>
+        <y>60</y>
+        <width>731</width>
+        <height>41</height>
        </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="numerocmd">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>Times New Roman</family>
+           <pointsize>13</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font:700 13pt &quot;Times New Roman&quot;;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
+         <property name="text">
+          <string>Numero</string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::MarkdownText</enum>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="date">
+         <property name="styleSheet">
+          <string notr="true">font:700 13pt &quot;Times New Roman&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Date</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="client">
+         <property name="styleSheet">
+          <string notr="true">font:700 13pt &quot;Times New Roman&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Client</string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::MarkdownText</enum>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="total">
+         <property name="styleSheet">
+          <string notr="true">font:700 13pt &quot;Times New Roman&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Total</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="etat">
+         <property name="styleSheet">
+          <string notr="true">font:700 13pt &quot;Times New Roman&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Etat</string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::MarkdownText</enum>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="indent">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="title">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>191</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font:700 20pt &quot;Times New Roman&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Commandes</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>781</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QColumnView" name="numcmd"/>
+       </item>
+       <item>
+        <widget class="QColumnView" name="datecmd"/>
+       </item>
+       <item>
+        <widget class="QColumnView" name="client_2"/>
+       </item>
+       <item>
+        <widget class="QColumnView" name="total_2"/>
+       </item>
+       <item>
+        <widget class="QColumnView" name="etat_2"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>692</x>
+        <y>20</y>
+        <width>111</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>+ Nouvelle</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>502</x>
+        <y>20</y>
+        <width>171</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Rechercher</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>702</x>
+        <y>490</y>
+        <width>101</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Supprimer</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>572</x>
+        <y>490</y>
+        <width>101</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Facture</string>
       </property>
      </widget>
     </widget>
+    <widget class="QWidget" name="page"/>
    </widget>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>90</y>
-      <width>131</width>
-      <height>221</height>
+      <y>100</y>
+      <width>101</width>
+      <height>261</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <property name="sizeConstraint">
       <enum>QLayout::SetNoConstraint</enum>
      </property>
-     <item row="4" column="2">
-      <spacer name="verticalSpacer">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>20</width>
-         <height>40</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
+     <property name="verticalSpacing">
+      <number>20</number>
+     </property>
      <item row="2" column="2">
+      <widget class="QPushButton" name="ClientButton">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* Estilo para los botones (QPushButton) */
+QPushButton {
+    font-size: 16px;
+    background-color: #F0ECE5; /* Fondo marrón */
+    color: black; /* Texto color negro */
+    border: none;
+    border-radius: 0;
+	padding : 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+/* Cambio de color al pasar el ratón sobre el botón */
+QPushButton:hover {
+    background-color: #31304D; 
+    color: white; 
+	border : 1px solid #F0ECE5;
+    border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Client</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
       <widget class="QPushButton" name="CommandeButton">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="styleSheet">
         <string notr="true">/* Estilo para los botones (QPushButton) */
 QPushButton {
@@ -453,7 +688,50 @@ QPushButton:hover {
       </widget>
      </item>
      <item row="1" column="2">
+      <widget class="QPushButton" name="CategorieButton">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* Estilo para los botones (QPushButton) */
+QPushButton {
+    font-size: 16px;
+    background-color: #F0ECE5; /* Fondo marrón */
+    color: black; /* Texto color negro */
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+/* Cambio de color al pasar el ratón sobre el botón */
+QPushButton:hover {
+    background-color: #31304D; 
+    color: white; 
+	border : 1px solid #F0ECE5;
+    border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Categorie</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
       <widget class="QPushButton" name="AdminButton">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="styleSheet">
         <string notr="true">/* Estilo para los botones (QPushButton) */
 QPushButton {
@@ -481,69 +759,6 @@ QPushButton:hover {
        </property>
        <property name="text">
         <string>Admins</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QPushButton" name="ClientButton">
-       <property name="styleSheet">
-        <string notr="true">/* Estilo para los botones (QPushButton) */
-QPushButton {
-    font-size: 16px;
-    background-color: #F0ECE5; /* Fondo marrón */
-    color: black; /* Texto color negro */
-    border: none;
-    border-radius: 0;
-	padding : 3px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Transición suave */
-}
-
-/* Cambio de color al pasar el ratón sobre el botón */
-QPushButton:hover {
-    background-color: #31304D; 
-    color: white; 
-	border : 1px solid #F0ECE5;
-    border-radius: 5px;
-}</string>
-       </property>
-       <property name="text">
-        <string>Client</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="2">
-      <widget class="QPushButton" name="CategorieButton">
-       <property name="styleSheet">
-        <string notr="true">/* Estilo para los botones (QPushButton) */
-QPushButton {
-    font-size: 16px;
-    background-color: #F0ECE5; /* Fondo marrón */
-    color: black; /* Texto color negro */
-    border: none;
-    border-radius: 0;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Transición suave */
-}
-
-/* Cambio de color al pasar el ratón sobre el botón */
-QPushButton:hover {
-    background-color: #31304D; 
-    color: white; 
-	border : 1px solid #F0ECE5;
-    border-radius: 5px;
-}</string>
-       </property>
-       <property name="text">
-        <string>Categorie</string>
        </property>
       </widget>
      </item>
