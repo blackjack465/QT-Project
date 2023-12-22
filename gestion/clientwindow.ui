@@ -65,7 +65,7 @@ QTableView::item:selected {
        <rect>
         <x>250</x>
         <y>460</y>
-        <width>321</width>
+        <width>421</width>
         <height>51</height>
        </rect>
       </property>
