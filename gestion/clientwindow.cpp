@@ -74,7 +74,7 @@ void ClientWindow::on_AdminButton_clicked()
 
 void ClientWindow::on_NewAdminButton_clicked()
 {
-    AdminModel->insertRow(mModel->rowCount());
+    AdminModel->insertRow(AdminModel->rowCount());
 }
 
 
