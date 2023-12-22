@@ -1,0 +1,8 @@
+# ninja log v5
+5	1528	7242569799284123	Gestion_autogen/timestamp	1f8535ea10115e9e
+5	1528	7242569799284123	C:/Users/Asus/OneDrive/Bureau/Qt/build-Gestion-Desktop_Qt_6_6_1_MinGW_64_bit-Debug/Gestion_autogen/timestamp	1f8535ea10115e9e
+1534	5671	7242569841893148	CMakeFiles/Gestion.dir/main.cpp.obj	2a6dbfcb18df0580
+5	1528	7242569799284123	Gestion_autogen/mocs_compilation.cpp	1f8535ea10115e9e
+5	1528	7242569799284123	C:/Users/Asus/OneDrive/Bureau/Qt/build-Gestion-Desktop_Qt_6_6_1_MinGW_64_bit-Debug/Gestion_autogen/mocs_compilation.cpp	1f8535ea10115e9e
+1530	5638	7242569841543213	CMakeFiles/Gestion.dir/Gestion_autogen/mocs_compilation.cpp.obj	bdd136c625cede1c
+1538	5710	7242569842271016	CMakeFiles/Gestion.dir/commandes.cpp.obj	349442ac306ca694

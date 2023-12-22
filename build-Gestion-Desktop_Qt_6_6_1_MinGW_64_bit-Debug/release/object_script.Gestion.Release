@@ -1,0 +1,10 @@
+release/admin.o
+release/client.o
+release/clientwindow.o
+release/commandes.o
+release/db.o
+release/login.o
+release/main.o
+release/moc_clientwindow.o
+release/moc_db.o
+release/moc_login.o

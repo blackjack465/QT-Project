@@ -1,0 +1,10 @@
+debug/admin.o
+debug/client.o
+debug/clientwindow.o
+debug/commandes.o
+debug/db.o
+debug/login.o
+debug/main.o
+debug/moc_clientwindow.o
+debug/moc_db.o
+debug/moc_login.o
