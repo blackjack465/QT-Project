@@ -42,6 +42,10 @@ private slots:
 
     void on_CommandeButton_clicked();
 
+    void on_stackedWidget_currentChanged(int arg1);
+
+    void on_Commande_customContextMenuRequested(const QPoint &pos);
+
 private:
     Ui::ClientWindow *ui;
 };

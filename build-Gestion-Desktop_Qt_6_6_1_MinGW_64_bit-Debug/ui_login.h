@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QGroupBox>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
@@ -25,12 +26,12 @@ class Ui_login
 public:
     QWidget *centralwidget;
     QGroupBox *groupBox;
-    QLabel *Userlabel;
-    QLabel *PassWordlabel;
-    QLineEdit *UserlineEdit;
-    QLineEdit *PassWordlineEdit;
+    QWidget *horizontalLayoutWidget;
+    QHBoxLayout *horizontalLayout;
     QPushButton *LoginButton;
     QPushButton *pushButton;
+    QLineEdit *UserlineEdit;
+    QLineEdit *PassWordlineEdit;
     QLabel *titre;
 
     void setupUi(QMainWindow *login)
@@ -47,69 +48,28 @@ public:
 "}"));
         groupBox = new QGroupBox(centralwidget);
         groupBox->setObjectName("groupBox");
-        groupBox->setGeometry(QRect(220, 230, 551, 331));
+        groupBox->setGeometry(QRect(230, 230, 521, 371));
         groupBox->setStyleSheet(QString::fromUtf8("QGroupBox {\n"
 "    font-size: 18px;\n"
 "    border: 2px solid #BCA37F; \n"
 "    border-radius: 10px; \n"
 "    background-color: #31304D; \n"
 "}"));
-        Userlabel = new QLabel(groupBox);
-        Userlabel->setObjectName("Userlabel");
-        Userlabel->setGeometry(QRect(110, 80, 91, 20));
-        Userlabel->setStyleSheet(QString::fromUtf8("QLabel {\n"
-"    font-size: 20px;\n"
-"    color: #B6BBC4;\n"
-"    border : 0;\n"
-"	background-color: transparent;\n"
-"}"));
-        PassWordlabel = new QLabel(groupBox);
-        PassWordlabel->setObjectName("PassWordlabel");
-        PassWordlabel->setGeometry(QRect(110, 170, 91, 20));
-        PassWordlabel->setStyleSheet(QString::fromUtf8("QLabel {\n"
-"    font-size: 20px;\n"
-"    color: #B6BBC4;\n"
-"    border : 0;\n"
-"	background-color: transparent;\n"
-"}"));
-        UserlineEdit = new QLineEdit(groupBox);
-        UserlineEdit->setObjectName("UserlineEdit");
-        UserlineEdit->setGeometry(QRect(260, 80, 113, 28));
-        UserlineEdit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
-"    font-size: 16px;\n"
-"    background-color: #F0ECE5; \n"
-"    border: solid #BCA37F; \n"
-"	border-radius: 0;\n"
-"}\n"
-"\n"
-"QLineEdit:hover{\n"
-" \n"
-"    background-color: #F8F0E5; \n"
-"    color: #161A30 ; \n"
-"	border : 2px solid #B6BBC4;\n"
-"    \n"
-"}"));
-        PassWordlineEdit = new QLineEdit(groupBox);
-        PassWordlineEdit->setObjectName("PassWordlineEdit");
-        PassWordlineEdit->setGeometry(QRect(260, 160, 113, 28));
-        PassWordlineEdit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
-"    font-size: 16px;\n"
-"    background-color: #F0ECE5; \n"
-"    border: solid #BCA37F; \n"
-"	border-radius: 0;\n"
-"}\n"
-"\n"
-"QLineEdit:hover{\n"
-" \n"
-"    background-color: #F8F0E5; \n"
-"    color: #161A30 ; \n"
-"	border : 2px solid #B6BBC4;\n"
-"    \n"
-"}"));
-        LoginButton = new QPushButton(groupBox);
+        horizontalLayoutWidget = new QWidget(groupBox);
+        horizontalLayoutWidget->setObjectName("horizontalLayoutWidget");
+        horizontalLayoutWidget->setGeometry(QRect(150, 230, 241, 51));
+        horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
+        horizontalLayout->setObjectName("horizontalLayout");
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        LoginButton = new QPushButton(horizontalLayoutWidget);
         LoginButton->setObjectName("LoginButton");
-        LoginButton->setGeometry(QRect(90, 260, 83, 41));
+        QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(LoginButton->sizePolicy().hasHeightForWidth());
+        LoginButton->setSizePolicy(sizePolicy);
         LoginButton->setStyleSheet(QString::fromUtf8("/* Estilo para los botones (QPushButton) */\n"
+"\n"
 "QPushButton {\n"
 "    font-size: 16px;\n"
 "    background-color: #F0ECE5; /* Fondo marr\303\263n */\n"
@@ -131,9 +91,13 @@ public:
 "	border : 1px solid #F0ECE5;\n"
 "    border-radius: 5px;\n"
 "}"));
-        pushButton = new QPushButton(groupBox);
+
+        horizontalLayout->addWidget(LoginButton);
+
+        pushButton = new QPushButton(horizontalLayoutWidget);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(190, 260, 83, 41));
+        sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
+        pushButton->setSizePolicy(sizePolicy);
         pushButton->setStyleSheet(QString::fromUtf8("/* Estilo para los botones (QPushButton) */\n"
 "QPushButton {\n"
 "    font-size: 16px;\n"
@@ -156,15 +120,55 @@ public:
 "	border : 1px solid #F0ECE5;\n"
 "    border-radius: 5px;\n"
 "}"));
+
+        horizontalLayout->addWidget(pushButton);
+
+        UserlineEdit = new QLineEdit(groupBox);
+        UserlineEdit->setObjectName("UserlineEdit");
+        UserlineEdit->setGeometry(QRect(160, 80, 231, 41));
+        UserlineEdit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+"    font-size: 16px;\n"
+"    background-color: #F0ECE5; \n"
+"    border: solid #BCA37F; \n"
+"	border-radius: 0;\n"
+"}\n"
+"\n"
+"QLineEdit:hover{\n"
+" \n"
+"    background-color: #F8F0E5; \n"
+"    color: #161A30 ; \n"
+"	border : 2px solid #B6BBC4;\n"
+"    \n"
+"}"));
+        PassWordlineEdit = new QLineEdit(groupBox);
+        PassWordlineEdit->setObjectName("PassWordlineEdit");
+        PassWordlineEdit->setGeometry(QRect(160, 130, 231, 41));
+        PassWordlineEdit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+"    font-size: 16px;\n"
+"    background-color: #F0ECE5; \n"
+"    border: solid #BCA37F; \n"
+"	border-radius: 0;\n"
+"}\n"
+"\n"
+"QLineEdit:hover{\n"
+" \n"
+"    background-color: #F8F0E5; \n"
+"    color: #161A30 ; \n"
+"	border : 2px solid #B6BBC4;\n"
+"    \n"
+"}"));
+        PassWordlineEdit->setInputMethodHints(Qt::ImhHiddenText);
         titre = new QLabel(centralwidget);
         titre->setObjectName("titre");
-        titre->setGeometry(QRect(450, 20, 81, 31));
+        titre->setGeometry(QRect(390, 170, 221, 31));
         titre->setStyleSheet(QString::fromUtf8("QLabel {\n"
-"    font-size: 25px;\n"
+"	font: 700 26pt \"Times New Roman\";\n"
+"    font-size: 35px;\n"
 "    color: #161A30;\n"
 "    border : 0;\n"
 "	background-color: transparent;\n"
 "}"));
+        titre->setAlignment(Qt::AlignCenter);
         login->setCentralWidget(centralwidget);
 
         retranslateUi(login);
@@ -175,10 +179,10 @@ public:
     void retranslateUi(QMainWindow *login)
     {
         login->setWindowTitle(QCoreApplication::translate("login", "MainWindow", nullptr));
-        Userlabel->setText(QCoreApplication::translate("login", "User", nullptr));
-        PassWordlabel->setText(QCoreApplication::translate("login", "PassWord", nullptr));
         LoginButton->setText(QCoreApplication::translate("login", "Login", nullptr));
         pushButton->setText(QCoreApplication::translate("login", "Anuler", nullptr));
+        UserlineEdit->setPlaceholderText(QCoreApplication::translate("login", "Username", nullptr));
+        PassWordlineEdit->setPlaceholderText(QCoreApplication::translate("login", "Password", nullptr));
         titre->setText(QCoreApplication::translate("login", "LOGIN", nullptr));
     } // retranslateUi
 
