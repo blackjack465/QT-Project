@@ -315,7 +315,7 @@ debug/moc_clientwindow.cpp: ../Gestion/clientwindow.h \
 		C:/Qt/6.6.1/mingw_64/include/QtCore/qabstractitemmodel.h \
 		debug/moc_predefs.h \
 		C:/Qt/6.6.1/mingw_64/bin/moc.exe
-	C:\Qt\6.6.1\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Asus/OneDrive/Bureau/geeestion/build-Gestion-Desktop_Qt_6_6_1_MinGW_64_bit-Debug/debug/moc_predefs.h -IC:/Qt/6.6.1/mingw_64/mkspecs/win32-g++ -IC:/Users/Asus/OneDrive/Bureau/geeestion/Gestion -IC:/Qt/6.6.1/mingw_64/include -IC:/Qt/6.6.1/mingw_64/include/QtWidgets -IC:/Qt/6.6.1/mingw_64/include/QtGui -IC:/Qt/6.6.1/mingw_64/include/QtSql -IC:/Qt/6.6.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\Gestion\clientwindow.h -o debug\moc_clientwindow.cpp
+	C:\Qt\6.6.1\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/abder/Documents/Genie informatique/Semmestre3/SEMESTER_3/C++/QT projects/geeestion/build-Gestion-Desktop_Qt_6_6_1_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.6.1/mingw_64/mkspecs/win32-g++ -I"C:/Users/abder/Documents/Genie informatique/Semmestre3/SEMESTER_3/C++/QT projects/geeestion/Gestion" -IC:/Qt/6.6.1/mingw_64/include -IC:/Qt/6.6.1/mingw_64/include/QtWidgets -IC:/Qt/6.6.1/mingw_64/include/QtGui -IC:/Qt/6.6.1/mingw_64/include/QtSql -IC:/Qt/6.6.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\Gestion\clientwindow.h -o debug\moc_clientwindow.cpp
 
 debug/moc_commande.cpp: ../Gestion/commande.h \
 		C:/Qt/6.6.1/mingw_64/include/QtWidgets/QWidget \
@@ -482,7 +482,7 @@ debug/moc_commande.cpp: ../Gestion/commande.h \
 		C:/Qt/6.6.1/mingw_64/include/QtCore/qnativeinterface.h \
 		debug/moc_predefs.h \
 		C:/Qt/6.6.1/mingw_64/bin/moc.exe
-	C:\Qt\6.6.1\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Asus/OneDrive/Bureau/geeestion/build-Gestion-Desktop_Qt_6_6_1_MinGW_64_bit-Debug/debug/moc_predefs.h -IC:/Qt/6.6.1/mingw_64/mkspecs/win32-g++ -IC:/Users/Asus/OneDrive/Bureau/geeestion/Gestion -IC:/Qt/6.6.1/mingw_64/include -IC:/Qt/6.6.1/mingw_64/include/QtWidgets -IC:/Qt/6.6.1/mingw_64/include/QtGui -IC:/Qt/6.6.1/mingw_64/include/QtSql -IC:/Qt/6.6.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\Gestion\commande.h -o debug\moc_commande.cpp
+	C:\Qt\6.6.1\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/abder/Documents/Genie informatique/Semmestre3/SEMESTER_3/C++/QT projects/geeestion/build-Gestion-Desktop_Qt_6_6_1_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.6.1/mingw_64/mkspecs/win32-g++ -I"C:/Users/abder/Documents/Genie informatique/Semmestre3/SEMESTER_3/C++/QT projects/geeestion/Gestion" -IC:/Qt/6.6.1/mingw_64/include -IC:/Qt/6.6.1/mingw_64/include/QtWidgets -IC:/Qt/6.6.1/mingw_64/include/QtGui -IC:/Qt/6.6.1/mingw_64/include/QtSql -IC:/Qt/6.6.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\Gestion\commande.h -o debug\moc_commande.cpp
 
 debug/moc_db.cpp: ../Gestion/db.h \
 		C:/Qt/6.6.1/mingw_64/include/QtWidgets/QMainWindow \
@@ -656,7 +656,7 @@ debug/moc_db.cpp: ../Gestion/db.h \
 		C:/Qt/6.6.1/mingw_64/include/QtSql/qtsqlexports.h \
 		debug/moc_predefs.h \
 		C:/Qt/6.6.1/mingw_64/bin/moc.exe
-	C:\Qt\6.6.1\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Asus/OneDrive/Bureau/geeestion/build-Gestion-Desktop_Qt_6_6_1_MinGW_64_bit-Debug/debug/moc_predefs.h -IC:/Qt/6.6.1/mingw_64/mkspecs/win32-g++ -IC:/Users/Asus/OneDrive/Bureau/geeestion/Gestion -IC:/Qt/6.6.1/mingw_64/include -IC:/Qt/6.6.1/mingw_64/include/QtWidgets -IC:/Qt/6.6.1/mingw_64/include/QtGui -IC:/Qt/6.6.1/mingw_64/include/QtSql -IC:/Qt/6.6.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\Gestion\db.h -o debug\moc_db.cpp
+	C:\Qt\6.6.1\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/abder/Documents/Genie informatique/Semmestre3/SEMESTER_3/C++/QT projects/geeestion/build-Gestion-Desktop_Qt_6_6_1_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.6.1/mingw_64/mkspecs/win32-g++ -I"C:/Users/abder/Documents/Genie informatique/Semmestre3/SEMESTER_3/C++/QT projects/geeestion/Gestion" -IC:/Qt/6.6.1/mingw_64/include -IC:/Qt/6.6.1/mingw_64/include/QtWidgets -IC:/Qt/6.6.1/mingw_64/include/QtGui -IC:/Qt/6.6.1/mingw_64/include/QtSql -IC:/Qt/6.6.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\Gestion\db.h -o debug\moc_db.cpp
 
 debug/moc_login.cpp: ../Gestion/login.h \
 		C:/Qt/6.6.1/mingw_64/include/QtWidgets/QMainWindow \
@@ -825,7 +825,7 @@ debug/moc_login.cpp: ../Gestion/login.h \
 		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qtabwidget.h \
 		debug/moc_predefs.h \
 		C:/Qt/6.6.1/mingw_64/bin/moc.exe
-	C:\Qt\6.6.1\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Asus/OneDrive/Bureau/geeestion/build-Gestion-Desktop_Qt_6_6_1_MinGW_64_bit-Debug/debug/moc_predefs.h -IC:/Qt/6.6.1/mingw_64/mkspecs/win32-g++ -IC:/Users/Asus/OneDrive/Bureau/geeestion/Gestion -IC:/Qt/6.6.1/mingw_64/include -IC:/Qt/6.6.1/mingw_64/include/QtWidgets -IC:/Qt/6.6.1/mingw_64/include/QtGui -IC:/Qt/6.6.1/mingw_64/include/QtSql -IC:/Qt/6.6.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\Gestion\login.h -o debug\moc_login.cpp
+	C:\Qt\6.6.1\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/abder/Documents/Genie informatique/Semmestre3/SEMESTER_3/C++/QT projects/geeestion/build-Gestion-Desktop_Qt_6_6_1_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.6.1/mingw_64/mkspecs/win32-g++ -I"C:/Users/abder/Documents/Genie informatique/Semmestre3/SEMESTER_3/C++/QT projects/geeestion/Gestion" -IC:/Qt/6.6.1/mingw_64/include -IC:/Qt/6.6.1/mingw_64/include/QtWidgets -IC:/Qt/6.6.1/mingw_64/include/QtGui -IC:/Qt/6.6.1/mingw_64/include/QtSql -IC:/Qt/6.6.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\Gestion\login.h -o debug\moc_login.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1310,14 +1310,8 @@ debug/clientwindow.o: ../Gestion/clientwindow.cpp ../Gestion/clientwindow.h \
 		C:/Qt/6.6.1/mingw_64/include/QtGui/qinputmethod.h \
 		C:/Qt/6.6.1/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.6.1/mingw_64/include/QtGui/qguiapplication_platform.h \
-		C:/Qt/6.6.1/mingw_64/include/QtWidgets/QGridLayout \
-		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qgridlayout.h \
-		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qlayout.h \
-		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qlayoutitem.h \
-		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qboxlayout.h \
-		C:/Qt/6.6.1/mingw_64/include/QtWidgets/QHBoxLayout \
-		C:/Qt/6.6.1/mingw_64/include/QtWidgets/QHeaderView \
-		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qheaderview.h \
+		C:/Qt/6.6.1/mingw_64/include/QtWidgets/QColumnView \
+		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qcolumnview.h \
 		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qabstractitemview.h \
 		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
 		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qframe.h \
@@ -1332,6 +1326,18 @@ debug/clientwindow.o: ../Gestion/clientwindow.cpp ../Gestion/clientwindow.h \
 		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qstyle.h \
 		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qtabbar.h \
 		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qrubberband.h \
+		C:/Qt/6.6.1/mingw_64/include/QtWidgets/QGridLayout \
+		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qgridlayout.h \
+		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qlayout.h \
+		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qboxlayout.h \
+		C:/Qt/6.6.1/mingw_64/include/QtWidgets/QHBoxLayout \
+		C:/Qt/6.6.1/mingw_64/include/QtWidgets/QHeaderView \
+		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qheaderview.h \
+		C:/Qt/6.6.1/mingw_64/include/QtWidgets/QLabel \
+		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qlabel.h \
+		C:/Qt/6.6.1/mingw_64/include/QtGui/qpicture.h \
+		C:/Qt/6.6.1/mingw_64/include/QtGui/qtextdocument.h \
 		C:/Qt/6.6.1/mingw_64/include/QtWidgets/QPushButton \
 		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qpushbutton.h \
 		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qabstractbutton.h \
@@ -1506,7 +1512,30 @@ debug/commande.o: ../Gestion/commande.cpp ../Gestion/commande.h \
 		C:/Qt/6.6.1/mingw_64/include/QtCore/QSizeF \
 		C:/Qt/6.6.1/mingw_64/include/QtGui/QTransform \
 		C:/Qt/6.6.1/mingw_64/include/QtCore/qnativeinterface.h \
-		ui_commande.h
+		ui_commande.h \
+		C:/Qt/6.6.1/mingw_64/include/QtCore/QVariant \
+		C:/Qt/6.6.1/mingw_64/include/QtWidgets/QApplication \
+		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qapplication.h \
+		C:/Qt/6.6.1/mingw_64/include/QtCore/qcoreapplication.h \
+		C:/Qt/6.6.1/mingw_64/include/QtCore/qeventloop.h \
+		C:/Qt/6.6.1/mingw_64/include/QtCore/qcoreapplication_platform.h \
+		C:/Qt/6.6.1/mingw_64/include/QtCore/qfuture.h \
+		C:/Qt/6.6.1/mingw_64/include/QtCore/qfutureinterface.h \
+		C:/Qt/6.6.1/mingw_64/include/QtCore/qmutex.h \
+		C:/Qt/6.6.1/mingw_64/include/QtCore/qdeadlinetimer.h \
+		C:/Qt/6.6.1/mingw_64/include/QtCore/qelapsedtimer.h \
+		C:/Qt/6.6.1/mingw_64/include/QtCore/qtsan_impl.h \
+		C:/Qt/6.6.1/mingw_64/include/QtCore/qresultstore.h \
+		C:/Qt/6.6.1/mingw_64/include/QtCore/qfuture_impl.h \
+		C:/Qt/6.6.1/mingw_64/include/QtCore/qthreadpool.h \
+		C:/Qt/6.6.1/mingw_64/include/QtCore/qthread.h \
+		C:/Qt/6.6.1/mingw_64/include/QtCore/qrunnable.h \
+		C:/Qt/6.6.1/mingw_64/include/QtCore/qexception.h \
+		C:/Qt/6.6.1/mingw_64/include/QtCore/qpromise.h \
+		C:/Qt/6.6.1/mingw_64/include/QtGui/qguiapplication.h \
+		C:/Qt/6.6.1/mingw_64/include/QtGui/qinputmethod.h \
+		C:/Qt/6.6.1/mingw_64/include/QtCore/qlocale.h \
+		C:/Qt/6.6.1/mingw_64/include/QtGui/qguiapplication_platform.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\commande.o ..\Gestion\commande.cpp
 
 debug/commandes.o: ../Gestion/commandes.cpp ../Gestion/commandes.h \
@@ -2038,6 +2067,11 @@ debug/login.o: ../Gestion/login.cpp ../Gestion/login.h \
 		C:/Qt/6.6.1/mingw_64/include/QtWidgets/QGroupBox \
 		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qgroupbox.h \
 		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qframe.h \
+		C:/Qt/6.6.1/mingw_64/include/QtWidgets/QHBoxLayout \
+		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qboxlayout.h \
+		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qlayout.h \
+		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qgridlayout.h \
 		C:/Qt/6.6.1/mingw_64/include/QtWidgets/QLabel \
 		C:/Qt/6.6.1/mingw_64/include/QtWidgets/qlabel.h \
 		C:/Qt/6.6.1/mingw_64/include/QtGui/qpicture.h \

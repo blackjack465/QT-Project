@@ -11,12 +11,13 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
-#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -26,12 +27,13 @@ class Ui_login
 public:
     QWidget *centralwidget;
     QGroupBox *groupBox;
-    QWidget *horizontalLayoutWidget;
-    QHBoxLayout *horizontalLayout;
-    QPushButton *LoginButton;
-    QPushButton *pushButton;
     QLineEdit *UserlineEdit;
     QLineEdit *PassWordlineEdit;
+    QWidget *widget;
+    QGridLayout *gridLayout;
+    QPushButton *pushButton;
+    QPushButton *LoginButton;
+    QSpacerItem *horizontalSpacer;
     QLabel *titre;
 
     void setupUi(QMainWindow *login)
@@ -55,74 +57,6 @@ public:
 "    border-radius: 10px; \n"
 "    background-color: #31304D; \n"
 "}"));
-        horizontalLayoutWidget = new QWidget(groupBox);
-        horizontalLayoutWidget->setObjectName("horizontalLayoutWidget");
-        horizontalLayoutWidget->setGeometry(QRect(150, 230, 241, 51));
-        horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
-        horizontalLayout->setObjectName("horizontalLayout");
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        LoginButton = new QPushButton(horizontalLayoutWidget);
-        LoginButton->setObjectName("LoginButton");
-        QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Preferred);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(LoginButton->sizePolicy().hasHeightForWidth());
-        LoginButton->setSizePolicy(sizePolicy);
-        LoginButton->setStyleSheet(QString::fromUtf8("/* Estilo para los botones (QPushButton) */\n"
-"\n"
-"QPushButton {\n"
-"    font-size: 16px;\n"
-"    background-color: #F0ECE5; /* Fondo marr\303\263n */\n"
-"    color: black; /* Texto color negro */\n"
-"    border: none;\n"
-"    border-radius: 0;\n"
-"    text-align: center;\n"
-"    text-decoration: none;\n"
-"    display: inline-block;\n"
-"    margin: 4px 2px;\n"
-"    cursor: pointer;\n"
-"    transition: background-color 0.3s, color 0.3s; /* Transici\303\263n suave */\n"
-"}\n"
-"\n"
-"/* Cambio de color al pasar el rat\303\263n sobre el bot\303\263n */\n"
-"QPushButton:hover {\n"
-"    background-color: #31304D; \n"
-"    color: white; \n"
-"	border : 1px solid #F0ECE5;\n"
-"    border-radius: 5px;\n"
-"}"));
-
-        horizontalLayout->addWidget(LoginButton);
-
-        pushButton = new QPushButton(horizontalLayoutWidget);
-        pushButton->setObjectName("pushButton");
-        sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
-        pushButton->setSizePolicy(sizePolicy);
-        pushButton->setStyleSheet(QString::fromUtf8("/* Estilo para los botones (QPushButton) */\n"
-"QPushButton {\n"
-"    font-size: 16px;\n"
-"    background-color: #F0ECE5; /* Fondo marr\303\263n */\n"
-"    color: black; /* Texto color negro */\n"
-"    border: none;\n"
-"    border-radius: 0;\n"
-"    text-align: center;\n"
-"    text-decoration: none;\n"
-"    display: inline-block;\n"
-"    margin: 4px 2px;\n"
-"    cursor: pointer;\n"
-"    transition: background-color 0.3s, color 0.3s; /* Transici\303\263n suave */\n"
-"}\n"
-"\n"
-"/* Cambio de color al pasar el rat\303\263n sobre el bot\303\263n */\n"
-"QPushButton:hover {\n"
-"    background-color: #31304D; \n"
-"    color: white; \n"
-"	border : 1px solid #F0ECE5;\n"
-"    border-radius: 5px;\n"
-"}"));
-
-        horizontalLayout->addWidget(pushButton);
-
         UserlineEdit = new QLineEdit(groupBox);
         UserlineEdit->setObjectName("UserlineEdit");
         UserlineEdit->setGeometry(QRect(160, 80, 231, 41));
@@ -158,6 +92,93 @@ public:
 "    \n"
 "}"));
         PassWordlineEdit->setInputMethodHints(Qt::ImhHiddenText);
+        widget = new QWidget(groupBox);
+        widget->setObjectName("widget");
+        widget->setGeometry(QRect(170, 260, 171, 53));
+        gridLayout = new QGridLayout(widget);
+        gridLayout->setObjectName("gridLayout");
+        gridLayout->setSizeConstraint(QLayout::SetNoConstraint);
+        gridLayout->setContentsMargins(0, 0, 0, 0);
+        pushButton = new QPushButton(widget);
+        pushButton->setObjectName("pushButton");
+        QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
+        pushButton->setSizePolicy(sizePolicy);
+        pushButton->setStyleSheet(QString::fromUtf8("/* Estilo para los botones (QPushButton) */\n"
+"QPushButton {\n"
+"    font-size: 16px;\n"
+"    background-color: #F0ECE5; /* Fondo marr\303\263n */\n"
+"    color: black; /* Texto color negro */\n"
+"    border: none;\n"
+"    border-radius: 0;\n"
+"	padding-left : 10px;\n"
+"	padding-top : 7px;\n"
+"	padding-right : 10px;\n"
+"	padding-bottom : 7px;\n"
+"	margin-left : 0px;\n"
+"	margin-top : 8px;\n"
+" 	margin-right : 8px;\n"
+"	margin-bottom : 8px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    cursor: pointer;\n"
+"    transition: background-color 0.3s, color 0.3s; /* Transici\303\263n suave */\n"
+"}\n"
+"\n"
+"/* Cambio de color al pasar el rat\303\263n sobre el bot\303\263n */\n"
+"QPushButton:hover {\n"
+"    background-color: #31304D; \n"
+"    color: white; \n"
+"	border : 1px solid #F0ECE5;\n"
+"    border-radius: 5px;\n"
+"}"));
+
+        gridLayout->addWidget(pushButton, 0, 2, 1, 1);
+
+        LoginButton = new QPushButton(widget);
+        LoginButton->setObjectName("LoginButton");
+        sizePolicy.setHeightForWidth(LoginButton->sizePolicy().hasHeightForWidth());
+        LoginButton->setSizePolicy(sizePolicy);
+        LoginButton->setStyleSheet(QString::fromUtf8("/* Estilo para los botones (QPushButton) */\n"
+"\n"
+"QPushButton {\n"
+"    font-size: 16px;\n"
+"    background-color: #F0ECE5; /* Fondo marr\303\263n */\n"
+"    color: black; /* Texto color negro */\n"
+"    border: none;\n"
+"    border-radius: 0;\n"
+"	padding-left : 10px;\n"
+"	padding-top : 7px;\n"
+"	padding-right : 10px;\n"
+"	padding-bottom : 7px;\n"
+"	margin-left : 8px;\n"
+"	margin-top : 8px;\n"
+" 	margin-right : 0px;\n"
+"	margin-bottom : 8px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    cursor: pointer;\n"
+"    transition: background-color 0.3s, color 0.3s; /* Transici\303\263n suave */\n"
+"}\n"
+"\n"
+"/* Cambio de color al pasar el rat\303\263n sobre el bot\303\263n */\n"
+"QPushButton:hover {\n"
+"    background-color: #31304D; \n"
+"    color: white; \n"
+"	border : 1px solid #F0ECE5;\n"
+"    border-radius: 5px;\n"
+"}"));
+
+        gridLayout->addWidget(LoginButton, 0, 0, 1, 1);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer, 0, 1, 1, 1);
+
         titre = new QLabel(centralwidget);
         titre->setObjectName("titre");
         titre->setGeometry(QRect(390, 170, 221, 31));
@@ -179,10 +200,10 @@ public:
     void retranslateUi(QMainWindow *login)
     {
         login->setWindowTitle(QCoreApplication::translate("login", "MainWindow", nullptr));
-        LoginButton->setText(QCoreApplication::translate("login", "Login", nullptr));
-        pushButton->setText(QCoreApplication::translate("login", "Anuler", nullptr));
         UserlineEdit->setPlaceholderText(QCoreApplication::translate("login", "Username", nullptr));
         PassWordlineEdit->setPlaceholderText(QCoreApplication::translate("login", "Password", nullptr));
+        pushButton->setText(QCoreApplication::translate("login", "Anuler", nullptr));
+        LoginButton->setText(QCoreApplication::translate("login", "Login", nullptr));
         titre->setText(QCoreApplication::translate("login", "LOGIN", nullptr));
     } // retranslateUi
 

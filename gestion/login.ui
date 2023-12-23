@@ -38,93 +38,6 @@
     background-color: #31304D; 
 }</string>
     </property>
-    <widget class="QWidget" name="horizontalLayoutWidget">
-     <property name="geometry">
-      <rect>
-       <x>150</x>
-       <y>230</y>
-       <width>241</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QPushButton" name="LoginButton">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">/* Estilo para los botones (QPushButton) */
-
-QPushButton {
-    font-size: 16px;
-    background-color: #F0ECE5; /* Fondo marrón */
-    color: black; /* Texto color negro */
-    border: none;
-    border-radius: 0;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Transición suave */
-}
-
-/* Cambio de color al pasar el ratón sobre el botón */
-QPushButton:hover {
-    background-color: #31304D; 
-    color: white; 
-	border : 1px solid #F0ECE5;
-    border-radius: 5px;
-}</string>
-        </property>
-        <property name="text">
-         <string>Login</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">/* Estilo para los botones (QPushButton) */
-QPushButton {
-    font-size: 16px;
-    background-color: #F0ECE5; /* Fondo marrón */
-    color: black; /* Texto color negro */
-    border: none;
-    border-radius: 0;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Transición suave */
-}
-
-/* Cambio de color al pasar el ratón sobre el botón */
-QPushButton:hover {
-    background-color: #31304D; 
-    color: white; 
-	border : 1px solid #F0ECE5;
-    border-radius: 5px;
-}</string>
-        </property>
-        <property name="text">
-         <string>Anuler</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
     <widget class="QLineEdit" name="UserlineEdit">
      <property name="geometry">
       <rect>
@@ -185,6 +98,123 @@ QLineEdit:hover{
      <property name="placeholderText">
       <string>Password</string>
      </property>
+    </widget>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>260</y>
+       <width>171</width>
+       <height>53</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetNoConstraint</enum>
+      </property>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="pushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/* Estilo para los botones (QPushButton) */
+QPushButton {
+    font-size: 16px;
+    background-color: #F0ECE5; /* Fondo marrón */
+    color: black; /* Texto color negro */
+    border: none;
+    border-radius: 0;
+	padding-left : 10px;
+	padding-top : 7px;
+	padding-right : 10px;
+	padding-bottom : 7px;
+	margin-left : 0px;
+	margin-top : 8px;
+ 	margin-right : 8px;
+	margin-bottom : 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+/* Cambio de color al pasar el ratón sobre el botón */
+QPushButton:hover {
+    background-color: #31304D; 
+    color: white; 
+	border : 1px solid #F0ECE5;
+    border-radius: 5px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Anuler</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QPushButton" name="LoginButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/* Estilo para los botones (QPushButton) */
+
+QPushButton {
+    font-size: 16px;
+    background-color: #F0ECE5; /* Fondo marrón */
+    color: black; /* Texto color negro */
+    border: none;
+    border-radius: 0;
+	padding-left : 10px;
+	padding-top : 7px;
+	padding-right : 10px;
+	padding-bottom : 7px;
+	margin-left : 8px;
+	margin-top : 8px;
+ 	margin-right : 0px;
+	margin-bottom : 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+/* Cambio de color al pasar el ratón sobre el botón */
+QPushButton:hover {
+    background-color: #31304D; 
+    color: white; 
+	border : 1px solid #F0ECE5;
+    border-radius: 5px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Login</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
     </widget>
    </widget>
    <widget class="QLabel" name="titre">
