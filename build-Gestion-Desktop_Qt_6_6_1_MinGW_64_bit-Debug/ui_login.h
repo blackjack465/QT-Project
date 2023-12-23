@@ -29,7 +29,7 @@ public:
     QGroupBox *groupBox;
     QLineEdit *UserlineEdit;
     QLineEdit *PassWordlineEdit;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QGridLayout *gridLayout;
     QPushButton *pushButton;
     QPushButton *LoginButton;
@@ -92,14 +92,14 @@ public:
 "    \n"
 "}"));
         PassWordlineEdit->setInputMethodHints(Qt::ImhHiddenText);
-        widget = new QWidget(groupBox);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(170, 260, 171, 53));
-        gridLayout = new QGridLayout(widget);
+        layoutWidget = new QWidget(groupBox);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(150, 272, 241, 51));
+        gridLayout = new QGridLayout(layoutWidget);
         gridLayout->setObjectName("gridLayout");
         gridLayout->setSizeConstraint(QLayout::SetNoConstraint);
         gridLayout->setContentsMargins(0, 0, 0, 0);
-        pushButton = new QPushButton(widget);
+        pushButton = new QPushButton(layoutWidget);
         pushButton->setObjectName("pushButton");
         QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
@@ -138,7 +138,7 @@ public:
 
         gridLayout->addWidget(pushButton, 0, 2, 1, 1);
 
-        LoginButton = new QPushButton(widget);
+        LoginButton = new QPushButton(layoutWidget);
         LoginButton->setObjectName("LoginButton");
         sizePolicy.setHeightForWidth(LoginButton->sizePolicy().hasHeightForWidth());
         LoginButton->setSizePolicy(sizePolicy);
