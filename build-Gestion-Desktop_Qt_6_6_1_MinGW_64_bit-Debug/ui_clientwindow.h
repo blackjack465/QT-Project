@@ -60,9 +60,13 @@ public:
     QWidget *horizontalLayoutWidget_2;
     QHBoxLayout *horizontalLayout_3;
     QColumnView *numcmd;
+    QSpacerItem *verticalSpacer;
     QColumnView *datecmd;
+    QSpacerItem *verticalSpacer_2;
     QColumnView *client_2;
+    QSpacerItem *verticalSpacer_3;
     QColumnView *total_2;
+    QSpacerItem *verticalSpacer_4;
     QColumnView *etat_2;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
@@ -416,20 +420,36 @@ public:
 
         horizontalLayout_3->addWidget(numcmd);
 
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        horizontalLayout_3->addItem(verticalSpacer);
+
         datecmd = new QColumnView(horizontalLayoutWidget_2);
         datecmd->setObjectName("datecmd");
 
         horizontalLayout_3->addWidget(datecmd);
+
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        horizontalLayout_3->addItem(verticalSpacer_2);
 
         client_2 = new QColumnView(horizontalLayoutWidget_2);
         client_2->setObjectName("client_2");
 
         horizontalLayout_3->addWidget(client_2);
 
+        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        horizontalLayout_3->addItem(verticalSpacer_3);
+
         total_2 = new QColumnView(horizontalLayoutWidget_2);
         total_2->setObjectName("total_2");
 
         horizontalLayout_3->addWidget(total_2);
+
+        verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        horizontalLayout_3->addItem(verticalSpacer_4);
 
         etat_2 = new QColumnView(horizontalLayoutWidget_2);
         etat_2->setObjectName("etat_2");
