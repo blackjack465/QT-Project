@@ -347,7 +347,7 @@ public:
         Commande->setObjectName("Commande");
         horizontalLayoutWidget = new QWidget(Commande);
         horizontalLayoutWidget->setObjectName("horizontalLayoutWidget");
-        horizontalLayoutWidget->setGeometry(QRect(10, 60, 731, 41));
+        horizontalLayoutWidget->setGeometry(QRect(10, 60, 781, 41));
         horizontalLayout_2 = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout_2->setObjectName("horizontalLayout_2");
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
