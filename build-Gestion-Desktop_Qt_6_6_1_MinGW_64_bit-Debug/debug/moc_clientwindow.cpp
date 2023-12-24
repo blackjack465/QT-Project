@@ -52,11 +52,14 @@ static constexpr auto qt_meta_stringdata_CLASSClientWindowENDCLASS = QtMocHelper
     "on_stackedWidget_currentChanged",
     "arg1",
     "on_Commande_customContextMenuRequested",
-    "pos"
+    "pos",
+    "on_numcmd_updatePreviewWidget",
+    "QModelIndex",
+    "index"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSClientWindowENDCLASS_t {
-    uint offsetsAndSizes[30];
+    uint offsetsAndSizes[36];
     char stringdata0[13];
     char stringdata1[24];
     char stringdata2[1];
@@ -72,6 +75,9 @@ struct qt_meta_stringdata_CLASSClientWindowENDCLASS_t {
     char stringdata12[5];
     char stringdata13[39];
     char stringdata14[4];
+    char stringdata15[30];
+    char stringdata16[12];
+    char stringdata17[6];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSClientWindowENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -91,7 +97,10 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSClientWindowENDCLASS_t qt_meta_
         QT_MOC_LITERAL(241, 31),  // "on_stackedWidget_currentChanged"
         QT_MOC_LITERAL(273, 4),  // "arg1"
         QT_MOC_LITERAL(278, 38),  // "on_Commande_customContextMenu..."
-        QT_MOC_LITERAL(317, 3)   // "pos"
+        QT_MOC_LITERAL(317, 3),  // "pos"
+        QT_MOC_LITERAL(321, 29),  // "on_numcmd_updatePreviewWidget"
+        QT_MOC_LITERAL(351, 11),  // "QModelIndex"
+        QT_MOC_LITERAL(363, 5)   // "index"
     },
     "ClientWindow",
     "on_UpdateButton_clicked",
@@ -107,7 +116,10 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSClientWindowENDCLASS_t qt_meta_
     "on_stackedWidget_currentChanged",
     "arg1",
     "on_Commande_customContextMenuRequested",
-    "pos"
+    "pos",
+    "on_numcmd_updatePreviewWidget",
+    "QModelIndex",
+    "index"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -119,7 +131,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSClientWindowENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      11,   14, // methods
+      12,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -127,17 +139,18 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSClientWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   80,    2, 0x08,    1 /* Private */,
-       3,    0,   81,    2, 0x08,    2 /* Private */,
-       4,    0,   82,    2, 0x08,    3 /* Private */,
-       5,    0,   83,    2, 0x08,    4 /* Private */,
-       6,    0,   84,    2, 0x08,    5 /* Private */,
-       7,    0,   85,    2, 0x08,    6 /* Private */,
-       8,    0,   86,    2, 0x08,    7 /* Private */,
-       9,    0,   87,    2, 0x08,    8 /* Private */,
-      10,    0,   88,    2, 0x08,    9 /* Private */,
-      11,    1,   89,    2, 0x08,   10 /* Private */,
-      13,    1,   92,    2, 0x08,   12 /* Private */,
+       1,    0,   86,    2, 0x08,    1 /* Private */,
+       3,    0,   87,    2, 0x08,    2 /* Private */,
+       4,    0,   88,    2, 0x08,    3 /* Private */,
+       5,    0,   89,    2, 0x08,    4 /* Private */,
+       6,    0,   90,    2, 0x08,    5 /* Private */,
+       7,    0,   91,    2, 0x08,    6 /* Private */,
+       8,    0,   92,    2, 0x08,    7 /* Private */,
+       9,    0,   93,    2, 0x08,    8 /* Private */,
+      10,    0,   94,    2, 0x08,    9 /* Private */,
+      11,    1,   95,    2, 0x08,   10 /* Private */,
+      13,    1,   98,    2, 0x08,   12 /* Private */,
+      15,    1,  101,    2, 0x08,   14 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -151,6 +164,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSClientWindowENDCLASS[] = {
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int,   12,
     QMetaType::Void, QMetaType::QPoint,   14,
+    QMetaType::Void, 0x80000000 | 16,   17,
 
        0        // eod
 };
@@ -187,7 +201,10 @@ Q_CONSTINIT const QMetaObject ClientWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'on_Commande_customContextMenuRequested'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const QPoint &, std::false_type>
+        QtPrivate::TypeAndForceComplete<const QPoint &, std::false_type>,
+        // method 'on_numcmd_updatePreviewWidget'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QModelIndex &, std::false_type>
     >,
     nullptr
 } };
@@ -207,6 +224,9 @@ void ClientWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         case 6: _t->on_DeleteAdminButton_clicked(); break;
         case 7: _t->on_UpdateAdminsButton_clicked(); break;
         case 8: _t->on_CommandeButton_clicked(); break;
+        //case 9: _t->on_stackedWidget_currentChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 10: _t->on_Commande_customContextMenuRequested((*reinterpret_cast< std::add_pointer_t<QPoint>>(_a[1]))); break;
+        //case 11: _t->on_numcmd_updatePreviewWidget((*reinterpret_cast< std::add_pointer_t<QModelIndex>>(_a[1]))); break;
         default: ;
         }
     }
@@ -231,13 +251,13 @@ int ClientWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 11)
+        if (_id < 12)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 11;
+        _id -= 12;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 11)
+        if (_id < 12)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 11;
+        _id -= 12;
     }
     return _id;
 }

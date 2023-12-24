@@ -19,7 +19,7 @@ public:
     Db *database;
     QSqlTableModel *mModel;
     QSqlTableModel *AdminModel;
-    QSqlTableModel *CommandeModel;
+    QSqlQueryModel* CommandeModel;
 
 private slots:
     void on_UpdateButton_clicked();
@@ -45,6 +45,8 @@ private slots:
     void on_stackedWidget_currentChanged(int arg1);
 
     void on_Commande_customContextMenuRequested(const QPoint &pos);
+
+    void on_numcmd_updatePreviewWidget(const QModelIndex &index);
 
 private:
     Ui::ClientWindow *ui;

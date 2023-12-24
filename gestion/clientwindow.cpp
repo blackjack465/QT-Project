@@ -17,16 +17,20 @@ ClientWindow::ClientWindow(QWidget *parent)
     ui->ClienttableView->setModel(mModel);
 
 //Admin
-    this->AdminModel = new QSqlTableModel(database);
+    /*this->AdminModel = new QSqlTableModel(database);
     AdminModel->setTable("Admin");
     AdminModel->select();
     ui->AdminsView->setModel(AdminModel);
 
-    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(0);*/
 
  //Commande
 
-    this->CommandeModel = new QSqlTableModel(database);
+    this->CommandeModel = new QSqlQueryModel();
+    CommandeModel->setQuery("SELECT numCmd FROM commandes");
+    ui->numcmd->setModel(CommandeModel);
+
+    ui->stackedWidget->setCurrentIndex(0);
 
 
 
