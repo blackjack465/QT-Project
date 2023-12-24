@@ -20,6 +20,10 @@ public:
     QSqlTableModel *mModel;
     QSqlTableModel *AdminModel;
     QSqlQueryModel* CommandeModel;
+    QSqlQueryModel* CommandeModel1;
+    QSqlQueryModel* CommandeModel2;
+    QSqlQueryModel* CommandeModel3;
+    QSqlQueryModel* CommandeModel4;
 
 private slots:
     void on_UpdateButton_clicked();
@@ -27,7 +31,7 @@ private slots:
     void on_NewButton_clicked();
 
     void on_DeleteButton_clicked();
-
+    void on_numcmd_updatePreviewWidget(const QModelIndex &index);
 
 
     void on_ClientButton_clicked();
@@ -45,8 +49,6 @@ private slots:
     void on_stackedWidget_currentChanged(int arg1);
 
     void on_Commande_customContextMenuRequested(const QPoint &pos);
-
-    void on_numcmd_updatePreviewWidget(const QModelIndex &index);
 
 private:
     Ui::ClientWindow *ui;

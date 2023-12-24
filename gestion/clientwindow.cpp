@@ -17,24 +17,40 @@ ClientWindow::ClientWindow(QWidget *parent)
     ui->ClienttableView->setModel(mModel);
 
 //Admin
-    /*this->AdminModel = new QSqlTableModel(database);
+    this->AdminModel = new QSqlTableModel(database);
     AdminModel->setTable("Admin");
     AdminModel->select();
     ui->AdminsView->setModel(AdminModel);
 
-    ui->stackedWidget->setCurrentIndex(0);*/
+    ui->stackedWidget->setCurrentIndex(0);
 
  //Commande
 
     this->CommandeModel = new QSqlQueryModel();
     CommandeModel->setQuery("SELECT numCmd FROM commandes");
     ui->numcmd->setModel(CommandeModel);
+    this->CommandeModel1 = new QSqlQueryModel();
+    CommandeModel1->setQuery("SELECT datCmd FROM commandes");
+    ui->datecmd->setModel(CommandeModel1);
+    this->CommandeModel2 = new QSqlQueryModel();
+    CommandeModel2->setQuery("SELECT Idclient FROM commandes");
+    ui->client_2->setModel(CommandeModel2);
+    this->CommandeModel3 = new QSqlQueryModel();
+    CommandeModel3->setQuery("SELECT montant FROM commandes");
+    ui->total_2->setModel(CommandeModel3);
+    this->CommandeModel4 = new QSqlQueryModel();
+    CommandeModel4->setQuery("SELECT etat FROM commandes");
+    ui->etat_2->setModel(CommandeModel4);
 
-    ui->stackedWidget->setCurrentIndex(0);
+
+
+    //ui->stackedWidget->setCurrentIndex(0);
 
 
 
 }
+
+void ClientWindow::on_stackedWidget_currentChanged(int arg1){}
 
 ClientWindow::~ClientWindow()
 {
@@ -98,6 +114,7 @@ void ClientWindow::on_CommandeButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(2);
 }
+
 
 
 void ClientWindow::on_Commande_customContextMenuRequested(const QPoint &pos)
