@@ -592,7 +592,7 @@ QPushButton:hover {
        </item>
       </layout>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="newcmd">
       <property name="geometry">
        <rect>
         <x>692</x>
@@ -605,7 +605,7 @@ QPushButton:hover {
        <string>+ Nouvelle</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="recherche">
       <property name="geometry">
        <rect>
         <x>502</x>
@@ -618,7 +618,7 @@ QPushButton:hover {
        <string>Rechercher</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="suppcmd">
       <property name="geometry">
        <rect>
         <x>702</x>
@@ -631,7 +631,7 @@ QPushButton:hover {
        <string>Supprimer</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="facture">
       <property name="geometry">
        <rect>
         <x>572</x>

@@ -8,7 +8,7 @@ ClientWindow::ClientWindow(QWidget *parent)
     , ui(new Ui::ClientWindow)
 {
     ui->setupUi(this);
-//Client
+    //Client
     this->database = new  Db();
     this->mModel = new QSqlTableModel(database);
 
@@ -16,7 +16,7 @@ ClientWindow::ClientWindow(QWidget *parent)
     mModel->select();
     ui->ClienttableView->setModel(mModel);
 
-//Admin
+    //Admin
     this->AdminModel = new QSqlTableModel(database);
     AdminModel->setTable("Admin");
     AdminModel->select();
@@ -24,24 +24,23 @@ ClientWindow::ClientWindow(QWidget *parent)
 
     ui->stackedWidget->setCurrentIndex(0);
 
- //Commande
+    //Commande
 
     this->CommandeModel = new QSqlQueryModel();
     CommandeModel->setQuery("SELECT numCmd FROM commandes");
     ui->numcmd->setModel(CommandeModel);
-    this->CommandeModel1 = new QSqlQueryModel();
+    this->CommandeModel1=new QSqlQueryModel();
     CommandeModel1->setQuery("SELECT datCmd FROM commandes");
     ui->datecmd->setModel(CommandeModel1);
-    this->CommandeModel2 = new QSqlQueryModel();
+    this->CommandeModel2=new QSqlQueryModel();
     CommandeModel2->setQuery("SELECT Idclient FROM commandes");
     ui->client_2->setModel(CommandeModel2);
-    this->CommandeModel3 = new QSqlQueryModel();
+    this->CommandeModel3=new QSqlQueryModel();
     CommandeModel3->setQuery("SELECT montant FROM commandes");
     ui->total_2->setModel(CommandeModel3);
-    this->CommandeModel4 = new QSqlQueryModel();
+    this->CommandeModel4=new QSqlQueryModel();
     CommandeModel4->setQuery("SELECT etat FROM commandes");
     ui->etat_2->setModel(CommandeModel4);
-
 
 
     //ui->stackedWidget->setCurrentIndex(0);
@@ -49,8 +48,6 @@ ClientWindow::ClientWindow(QWidget *parent)
 
 
 }
-
-void ClientWindow::on_stackedWidget_currentChanged(int arg1){}
 
 ClientWindow::~ClientWindow()
 {
@@ -116,8 +113,13 @@ void ClientWindow::on_CommandeButton_clicked()
 }
 
 
-
 void ClientWindow::on_Commande_customContextMenuRequested(const QPoint &pos)
+{
+
+}
+
+
+void ClientWindow::on_newcmd_clicked()
 {
 
 }
