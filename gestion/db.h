@@ -1,7 +1,7 @@
 // db.h
 #ifndef DB_H
 #define DB_H
-
+#include <QSqlDatabase>
 #include <QMainWindow>
 #include <QSqlDatabase>
 
@@ -21,7 +21,7 @@ public:
 
 private:
     Ui::Db *ui;
-    QSqlDatabase m_database;  // Exposez la base de données comme membre privé
+    QSqlDatabase m_database;
 };
 
 #endif // DB_H

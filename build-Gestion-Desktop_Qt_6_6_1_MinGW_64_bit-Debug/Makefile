@@ -225,6 +225,7 @@ Makefile: ../Gestion/Gestion.pro C:/Qt/6.6.1/mingw_64/mkspecs/win32-g++/qmake.co
 		C:/Qt/6.6.1/mingw_64/mkspecs/features/yacc.prf \
 		C:/Qt/6.6.1/mingw_64/mkspecs/features/lex.prf \
 		../Gestion/Gestion.pro \
+		C:/Qt/6.6.1/mingw_64/lib/Qt6PrintSupport.prl \
 		C:/Qt/6.6.1/mingw_64/lib/Qt6Widgets.prl \
 		C:/Qt/6.6.1/mingw_64/lib/Qt6Gui.prl \
 		C:/Qt/6.6.1/mingw_64/lib/Qt6Sql.prl \
@@ -387,6 +388,7 @@ C:/Qt/6.6.1/mingw_64/mkspecs/features/exceptions.prf:
 C:/Qt/6.6.1/mingw_64/mkspecs/features/yacc.prf:
 C:/Qt/6.6.1/mingw_64/mkspecs/features/lex.prf:
 ../Gestion/Gestion.pro:
+C:/Qt/6.6.1/mingw_64/lib/Qt6PrintSupport.prl:
 C:/Qt/6.6.1/mingw_64/lib/Qt6Widgets.prl:
 C:/Qt/6.6.1/mingw_64/lib/Qt6Gui.prl:
 C:/Qt/6.6.1/mingw_64/lib/Qt6Sql.prl:

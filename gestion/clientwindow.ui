@@ -605,19 +605,6 @@ QPushButton:hover {
        <string>+ Nouvelle</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="recherche">
-      <property name="geometry">
-       <rect>
-        <x>502</x>
-        <y>20</y>
-        <width>171</width>
-        <height>29</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Rechercher</string>
-      </property>
-     </widget>
      <widget class="QPushButton" name="suppcmd">
       <property name="geometry">
        <rect>
@@ -642,6 +629,19 @@ QPushButton:hover {
       </property>
       <property name="text">
        <string>Facture</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Rechercher">
+      <property name="geometry">
+       <rect>
+        <x>492</x>
+        <y>20</y>
+        <width>181</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Rechercher</string>
       </property>
      </widget>
     </widget>

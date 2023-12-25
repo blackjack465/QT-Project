@@ -57,6 +57,14 @@ private slots:
 
     void on_newcmd_clicked();
 
+
+    void on_Rechercher_clicked();
+
+    void on_suppcmd_clicked();
+    void refreshOrderView();
+
+    void on_facture_clicked();
+
 private:
     Ui::ClientWindow *ui;
 };
