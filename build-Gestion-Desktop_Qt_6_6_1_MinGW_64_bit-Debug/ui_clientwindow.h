@@ -39,6 +39,7 @@ public:
     QPushButton *NewButton;
     QSpacerItem *horizontalSpacer;
     QPushButton *DeleteButton;
+    QLabel *label;
     QWidget *AdminPage;
     QTableView *AdminsView;
     QWidget *layoutWidget1;
@@ -48,6 +49,7 @@ public:
     QPushButton *DeleteAdminButton;
     QSpacerItem *horizontalSpacer_3;
     QPushButton *UpdateAdminsButton;
+    QLabel *label_2;
     QWidget *Commande;
     QWidget *horizontalLayoutWidget;
     QHBoxLayout *horizontalLayout_2;
@@ -89,12 +91,12 @@ public:
         centralwidget->setObjectName("centralwidget");
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName("stackedWidget");
-        stackedWidget->setGeometry(QRect(120, 40, 881, 541));
+        stackedWidget->setGeometry(QRect(120, 60, 871, 541));
         ClientPage = new QWidget();
         ClientPage->setObjectName("ClientPage");
         ClienttableView = new QTableView(ClientPage);
         ClienttableView->setObjectName("ClienttableView");
-        ClienttableView->setGeometry(QRect(10, 30, 851, 401));
+        ClienttableView->setGeometry(QRect(80, 70, 751, 371));
         ClienttableView->setStyleSheet(QString::fromUtf8("QTableView {\n"
 "    border: 1px solid #ccc;\n"
 "    gridline-color: #ccc;\n"
@@ -118,7 +120,7 @@ public:
 "}"));
         layoutWidget = new QWidget(ClientPage);
         layoutWidget->setObjectName("layoutWidget");
-        layoutWidget->setGeometry(QRect(100, 460, 571, 51));
+        layoutWidget->setGeometry(QRect(170, 460, 571, 55));
         horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName("horizontalLayout");
         horizontalLayout->setSizeConstraint(QLayout::SetNoConstraint);
@@ -131,8 +133,8 @@ public:
 "    background-color: #F0ECE5; /* Fondo marr\303\263n */\n"
 "    color: black; /* Texto color negro */\n"
 "    border: none;\n"
-"	padding : 3px;\n"
 "    border-radius: 0;\n"
+"padding : 10px;\n"
 "    text-align: center;\n"
 "    text-decoration: none;\n"
 "    display: inline-block;\n"
@@ -164,7 +166,7 @@ public:
 "    color: black; /* Texto color negro */\n"
 "    border: none;\n"
 "    border-radius: 0;\n"
-"	padding : 3px;\n"
+"padding : 10px;\n"
 "    text-align: center;\n"
 "    text-decoration: none;\n"
 "    display: inline-block;\n"
@@ -179,8 +181,7 @@ public:
 "    color: white; \n"
 "	border : 1px solid #F0ECE5;\n"
 "    border-radius: 5px;\n"
-"}\n"
-""));
+"}"));
 
         horizontalLayout->addWidget(NewButton);
 
@@ -197,7 +198,7 @@ public:
 "    color: black; /* Texto color negro */\n"
 "    border: none;\n"
 "    border-radius: 0;\n"
-"padding : 3px;\n"
+"padding : 10px;\n"
 "    text-align: center;\n"
 "    text-decoration: none;\n"
 "    display: inline-block;\n"
@@ -212,17 +213,26 @@ public:
 "    color: white; \n"
 "	border : 1px solid #F0ECE5;\n"
 "    border-radius: 5px;\n"
-"}\n"
-""));
+"}"));
 
         horizontalLayout->addWidget(DeleteButton);
 
+        label = new QLabel(ClientPage);
+        label->setObjectName("label");
+        label->setGeometry(QRect(50, 0, 131, 41));
+        label->setStyleSheet(QString::fromUtf8("QLabel\n"
+"{\n"
+"color: black; \n"
+"font-weight: bold; \n"
+"font-size: 25px;\n"
+"font:700 20pt \"Times New Roman\";\n"
+"}"));
         stackedWidget->addWidget(ClientPage);
         AdminPage = new QWidget();
         AdminPage->setObjectName("AdminPage");
         AdminsView = new QTableView(AdminPage);
         AdminsView->setObjectName("AdminsView");
-        AdminsView->setGeometry(QRect(10, 30, 861, 421));
+        AdminsView->setGeometry(QRect(190, 80, 661, 371));
         AdminsView->setStyleSheet(QString::fromUtf8("QTableView {\n"
 "    border: 1px solid #ccc;\n"
 "    gridline-color: #ccc;\n"
@@ -246,7 +256,7 @@ public:
 "}"));
         layoutWidget1 = new QWidget(AdminPage);
         layoutWidget1->setObjectName("layoutWidget1");
-        layoutWidget1->setGeometry(QRect(80, 490, 631, 37));
+        layoutWidget1->setGeometry(QRect(210, 470, 631, 51));
         gridLayout_2 = new QGridLayout(layoutWidget1);
         gridLayout_2->setObjectName("gridLayout_2");
         gridLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -259,7 +269,7 @@ public:
 "    color: black; /* Texto color negro */\n"
 "    border: none;\n"
 "    border-radius: 0;\n"
-"padding : 3px;\n"
+"padding : 10px;\n"
 "    text-align: center;\n"
 "    text-decoration: none;\n"
 "    display: inline-block;\n"
@@ -291,7 +301,7 @@ public:
 "    color: black; /* Texto color negro */\n"
 "    border: none;\n"
 "    border-radius: 0;\n"
-"padding : 3px;\n"
+"padding : 10px;\n"
 "    text-align: center;\n"
 "    text-decoration: none;\n"
 "    display: inline-block;\n"
@@ -323,7 +333,7 @@ public:
 "    color: black; /* Texto color negro */\n"
 "    border: none;\n"
 "    border-radius: 0;\n"
-"padding : 3px;\n"
+"padding : 10px;\n"
 "    text-align: center;\n"
 "    text-decoration: none;\n"
 "    display: inline-block;\n"
@@ -342,6 +352,16 @@ public:
 
         gridLayout_2->addWidget(UpdateAdminsButton, 0, 4, 1, 1);
 
+        label_2 = new QLabel(AdminPage);
+        label_2->setObjectName("label_2");
+        label_2->setGeometry(QRect(60, 20, 131, 31));
+        label_2->setStyleSheet(QString::fromUtf8("QLabel\n"
+"{\n"
+"color: black; \n"
+"font-weight: bold; \n"
+"font-size: 25px;\n"
+"font:700 20pt \"Times New Roman\";\n"
+"}"));
         stackedWidget->addWidget(AdminPage);
         Commande = new QWidget();
         Commande->setObjectName("Commande");
@@ -606,7 +626,7 @@ public:
 
         retranslateUi(ClientWindow);
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(ClientWindow);
@@ -618,9 +638,11 @@ public:
         UpdateButton->setText(QCoreApplication::translate("ClientWindow", "Update", nullptr));
         NewButton->setText(QCoreApplication::translate("ClientWindow", "New", nullptr));
         DeleteButton->setText(QCoreApplication::translate("ClientWindow", "Delete", nullptr));
+        label->setText(QCoreApplication::translate("ClientWindow", "Clients", nullptr));
         NewAdminButton->setText(QCoreApplication::translate("ClientWindow", "New Admin", nullptr));
         DeleteAdminButton->setText(QCoreApplication::translate("ClientWindow", "Delete Admin", nullptr));
         UpdateAdminsButton->setText(QCoreApplication::translate("ClientWindow", "Update", nullptr));
+        label_2->setText(QCoreApplication::translate("ClientWindow", "Admins", nullptr));
         numerocmd->setText(QCoreApplication::translate("ClientWindow", "Numero", nullptr));
         date->setText(QCoreApplication::translate("ClientWindow", "Date", nullptr));
         client->setText(QCoreApplication::translate("ClientWindow", "Client", nullptr));
