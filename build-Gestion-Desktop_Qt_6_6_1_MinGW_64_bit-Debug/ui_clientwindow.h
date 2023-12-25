@@ -478,16 +478,108 @@ public:
 
         newcmd = new QPushButton(Commande);
         newcmd->setObjectName("newcmd");
-        newcmd->setGeometry(QRect(692, 20, 111, 29));
+        newcmd->setGeometry(QRect(692, -2, 111, 51));
+        newcmd->setStyleSheet(QString::fromUtf8("/* Estilo para los botones (QPushButton) */\n"
+"QPushButton {\n"
+"    font-size: 16px;\n"
+"    background-color: #F0ECE5; /* Fondo marr\303\263n */\n"
+"    color: black; /* Texto color negro */\n"
+"    border: none;\n"
+"    border-radius: 0;\n"
+"padding : 10px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    margin: 4px 2px;\n"
+"    cursor: pointer;\n"
+"    transition: background-color 0.3s, color 0.3s; /* Transici\303\263n suave */\n"
+"}\n"
+"\n"
+"/* Cambio de color al pasar el rat\303\263n sobre el bot\303\263n */\n"
+"QPushButton:hover {\n"
+"    background-color: #31304D; \n"
+"    color: white; \n"
+"	border : 1px solid #F0ECE5;\n"
+"    border-radius: 5px;\n"
+"}"));
         suppcmd = new QPushButton(Commande);
         suppcmd->setObjectName("suppcmd");
-        suppcmd->setGeometry(QRect(702, 490, 101, 29));
+        suppcmd->setGeometry(QRect(702, 480, 101, 51));
+        suppcmd->setStyleSheet(QString::fromUtf8("/* Estilo para los botones (QPushButton) */\n"
+"QPushButton {\n"
+"    font-size: 16px;\n"
+"    background-color: #F0ECE5; /* Fondo marr\303\263n */\n"
+"    color: black; /* Texto color negro */\n"
+"    border: none;\n"
+"    border-radius: 0;\n"
+"padding : 10px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    margin: 4px 2px;\n"
+"    cursor: pointer;\n"
+"    transition: background-color 0.3s, color 0.3s; /* Transici\303\263n suave */\n"
+"}\n"
+"\n"
+"/* Cambio de color al pasar el rat\303\263n sobre el bot\303\263n */\n"
+"QPushButton:hover {\n"
+"    background-color: #31304D; \n"
+"    color: white; \n"
+"	border : 1px solid #F0ECE5;\n"
+"    border-radius: 5px;\n"
+"}"));
         facture = new QPushButton(Commande);
         facture->setObjectName("facture");
-        facture->setGeometry(QRect(572, 490, 101, 29));
+        facture->setGeometry(QRect(572, 480, 101, 51));
+        facture->setStyleSheet(QString::fromUtf8("/* Estilo para los botones (QPushButton) */\n"
+"QPushButton {\n"
+"    font-size: 16px;\n"
+"    background-color: #F0ECE5; /* Fondo marr\303\263n */\n"
+"    color: black; /* Texto color negro */\n"
+"    border: none;\n"
+"    border-radius: 0;\n"
+"padding : 10px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    margin: 4px 2px;\n"
+"    cursor: pointer;\n"
+"    transition: background-color 0.3s, color 0.3s; /* Transici\303\263n suave */\n"
+"}\n"
+"\n"
+"/* Cambio de color al pasar el rat\303\263n sobre el bot\303\263n */\n"
+"QPushButton:hover {\n"
+"    background-color: #31304D; \n"
+"    color: white; \n"
+"	border : 1px solid #F0ECE5;\n"
+"    border-radius: 5px;\n"
+"}"));
         Rechercher = new QPushButton(Commande);
         Rechercher->setObjectName("Rechercher");
-        Rechercher->setGeometry(QRect(492, 20, 181, 29));
+        Rechercher->setGeometry(QRect(492, -2, 181, 51));
+        Rechercher->setStyleSheet(QString::fromUtf8("/* Estilo para los botones (QPushButton) */\n"
+"QPushButton {\n"
+"    font-size: 16px;\n"
+"    background-color: #F0ECE5; /* Fondo marr\303\263n */\n"
+"    color: black; /* Texto color negro */\n"
+"    border: none;\n"
+"    border-radius: 0;\n"
+"padding : 8px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    margin: 4px 2px;\n"
+"    cursor: pointer;\n"
+"    transition: background-color 0.3s, color 0.3s; /* Transici\303\263n suave */\n"
+"}\n"
+"\n"
+"/* Cambio de color al pasar el rat\303\263n sobre el bot\303\263n */\n"
+"QPushButton:hover {\n"
+"    background-color: #31304D; \n"
+"    color: white; \n"
+"	border : 1px solid #F0ECE5;\n"
+"    border-radius: 5px;\n"
+"}"));
         stackedWidget->addWidget(Commande);
         page = new QWidget();
         page->setObjectName("page");
@@ -626,7 +718,7 @@ public:
 
         retranslateUi(ClientWindow);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(ClientWindow);
