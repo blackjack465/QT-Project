@@ -18,8 +18,8 @@
     <property name="geometry">
      <rect>
       <x>120</x>
-      <y>40</y>
-      <width>881</width>
+      <y>60</y>
+      <width>871</width>
       <height>541</height>
      </rect>
     </property>
@@ -30,10 +30,10 @@
      <widget class="QTableView" name="ClienttableView">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>30</y>
-        <width>851</width>
-        <height>401</height>
+        <x>80</x>
+        <y>70</y>
+        <width>751</width>
+        <height>371</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -63,10 +63,10 @@ QTableView::item:selected {
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>100</x>
+        <x>170</x>
         <y>460</y>
         <width>571</width>
-        <height>51</height>
+        <height>55</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
@@ -94,8 +94,8 @@ QPushButton {
     background-color: #F0ECE5; /* Fondo marrón */
     color: black; /* Texto color negro */
     border: none;
-	padding : 3px;
     border-radius: 0;
+padding : 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -140,7 +140,7 @@ QPushButton {
     color: black; /* Texto color negro */
     border: none;
     border-radius: 0;
-	padding : 3px;
+padding : 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -155,8 +155,7 @@ QPushButton:hover {
     color: white; 
 	border : 1px solid #F0ECE5;
     border-radius: 5px;
-}
-</string>
+}</string>
          </property>
          <property name="text">
           <string>New</string>
@@ -186,7 +185,7 @@ QPushButton {
     color: black; /* Texto color negro */
     border: none;
     border-radius: 0;
-padding : 3px;
+padding : 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -201,8 +200,7 @@ QPushButton:hover {
     color: white; 
 	border : 1px solid #F0ECE5;
     border-radius: 5px;
-}
-</string>
+}</string>
          </property>
          <property name="text">
           <string>Delete</string>
@@ -211,15 +209,37 @@ QPushButton:hover {
        </item>
       </layout>
      </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>0</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel
+{
+color: black; 
+font-weight: bold; 
+font-size: 25px;
+font:700 20pt &quot;Times New Roman&quot;;
+}</string>
+      </property>
+      <property name="text">
+       <string>Clients</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="AdminPage">
      <widget class="QTableView" name="AdminsView">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>30</y>
-        <width>861</width>
-        <height>421</height>
+        <x>190</x>
+        <y>80</y>
+        <width>661</width>
+        <height>371</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -249,10 +269,10 @@ QTableView::item:selected {
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>80</x>
-        <y>490</y>
+        <x>210</x>
+        <y>470</y>
         <width>631</width>
-        <height>37</height>
+        <height>51</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout_2">
@@ -266,7 +286,7 @@ QPushButton {
     color: black; /* Texto color negro */
     border: none;
     border-radius: 0;
-padding : 3px;
+padding : 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -311,7 +331,7 @@ QPushButton {
     color: black; /* Texto color negro */
     border: none;
     border-radius: 0;
-padding : 3px;
+padding : 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -356,7 +376,7 @@ QPushButton {
     color: black; /* Texto color negro */
     border: none;
     border-radius: 0;
-padding : 3px;
+padding : 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -379,6 +399,28 @@ QPushButton:hover {
         </widget>
        </item>
       </layout>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>20</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel
+{
+color: black; 
+font-weight: bold; 
+font-size: 25px;
+font:700 20pt &quot;Times New Roman&quot;;
+}</string>
+      </property>
+      <property name="text">
+       <string>Admins</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="Commande">
@@ -596,10 +638,35 @@ QPushButton:hover {
       <property name="geometry">
        <rect>
         <x>692</x>
-        <y>20</y>
+        <y>-2</y>
         <width>111</width>
-        <height>29</height>
+        <height>51</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* Estilo para los botones (QPushButton) */
+QPushButton {
+    font-size: 16px;
+    background-color: #F0ECE5; /* Fondo marrón */
+    color: black; /* Texto color negro */
+    border: none;
+    border-radius: 0;
+padding : 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+/* Cambio de color al pasar el ratón sobre el botón */
+QPushButton:hover {
+    background-color: #31304D; 
+    color: white; 
+	border : 1px solid #F0ECE5;
+    border-radius: 5px;
+}</string>
       </property>
       <property name="text">
        <string>+ Nouvelle</string>
@@ -609,10 +676,35 @@ QPushButton:hover {
       <property name="geometry">
        <rect>
         <x>702</x>
-        <y>490</y>
+        <y>480</y>
         <width>101</width>
-        <height>29</height>
+        <height>51</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* Estilo para los botones (QPushButton) */
+QPushButton {
+    font-size: 16px;
+    background-color: #F0ECE5; /* Fondo marrón */
+    color: black; /* Texto color negro */
+    border: none;
+    border-radius: 0;
+padding : 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+/* Cambio de color al pasar el ratón sobre el botón */
+QPushButton:hover {
+    background-color: #31304D; 
+    color: white; 
+	border : 1px solid #F0ECE5;
+    border-radius: 5px;
+}</string>
       </property>
       <property name="text">
        <string>Supprimer</string>
@@ -622,10 +714,35 @@ QPushButton:hover {
       <property name="geometry">
        <rect>
         <x>572</x>
-        <y>490</y>
+        <y>480</y>
         <width>101</width>
-        <height>29</height>
+        <height>51</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* Estilo para los botones (QPushButton) */
+QPushButton {
+    font-size: 16px;
+    background-color: #F0ECE5; /* Fondo marrón */
+    color: black; /* Texto color negro */
+    border: none;
+    border-radius: 0;
+padding : 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+/* Cambio de color al pasar el ratón sobre el botón */
+QPushButton:hover {
+    background-color: #31304D; 
+    color: white; 
+	border : 1px solid #F0ECE5;
+    border-radius: 5px;
+}</string>
       </property>
       <property name="text">
        <string>Facture</string>
@@ -635,10 +752,35 @@ QPushButton:hover {
       <property name="geometry">
        <rect>
         <x>492</x>
-        <y>20</y>
+        <y>-2</y>
         <width>181</width>
-        <height>29</height>
+        <height>51</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* Estilo para los botones (QPushButton) */
+QPushButton {
+    font-size: 16px;
+    background-color: #F0ECE5; /* Fondo marrón */
+    color: black; /* Texto color negro */
+    border: none;
+    border-radius: 0;
+padding : 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+/* Cambio de color al pasar el ratón sobre el botón */
+QPushButton:hover {
+    background-color: #31304D; 
+    color: white; 
+	border : 1px solid #F0ECE5;
+    border-radius: 5px;
+}</string>
       </property>
       <property name="text">
        <string>Rechercher</string>
