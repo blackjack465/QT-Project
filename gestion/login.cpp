@@ -13,6 +13,8 @@ login::login(QWidget *parent)
     , ui(new Ui::login)
 {
     ui->setupUi(this);
+
+    ui->PassWordlineEdit->setEchoMode(QLineEdit::Password);
 }
 
 login::~login()

@@ -356,9 +356,13 @@ void ClientWindow::on_facture_clicked()
 {
     // Get the selection model from the QColumnView
     QItemSelectionModel *selectionModel = ui->numcmd->selectionModel();
+    QItemSelectionModel *selectionModel1 = ui->datecmd->selectionModel();
+    QItemSelectionModel *selectionModel2 = ui->total_2->selectionModel();
+    QItemSelectionModel *selectionModel3 = ui->client_2->selectionModel();
+    QItemSelectionModel *selectionModel4 = ui->etat_2->selectionModel();
 
     // Check if any item is selected
-    if (!selectionModel->hasSelection()) {
+    if (!selectionModel->hasSelection() && !selectionModel1->hasSelection() && !selectionModel2->hasSelection() && !selectionModel3->hasSelection() && !selectionModel4->hasSelection()) {
         QMessageBox::warning(this, "Avertissement", "Selectionner une commande s'il vous plaît!");
         return;
     }
@@ -368,6 +372,7 @@ void ClientWindow::on_facture_clicked()
 
     // Get the model associated with the QColumnView
     QAbstractItemModel *model = ui->numcmd->model();
+
 
     // Retrieve order number from the model using the selected index
     QString orderNumber = model->data(selectedIndex, Qt::DisplayRole).toString();
@@ -398,26 +403,24 @@ void ClientWindow::on_facture_clicked()
     }
 
     // Format order and client details into a bill
-    QString billContent = QString("Order Number: %1\n"
+    QString billContent = QString("Commande numero: %1\n"
                                   "Date: %2\n"
                                   "Client ID: %3\n"
-                                  "Client Name: %4\n"
-                                  "Address: %5\n"
-                                  "Phone: %6\n"
-                                  "Amount: %7\n"
-                                  "Status: %8")
+                                  "Nom du client: %4\n"
+                                  "Adresse: %5\n"
+                                  "téléphone: %6\n"
+                                  "Montant: %7\n")
                               .arg(queryOrder.value("numCmd").toString())
                               .arg(queryOrder.value("datCmd").toString())
                               .arg(queryOrder.value("Idclient").toString())
-                              .arg(queryClient.value("last_name").toString())  // Adjust column name as per your table structure
-                              .arg(queryClient.value("address").toString())  // Adjust column name as per your table structure
-                              .arg(queryClient.value("phone").toString())  // Adjust column name as per your table structure
-                              .arg(queryOrder.value("montant").toString())
-                              .arg(queryOrder.value("etat").toString());
+                              .arg(queryClient.value("last_name").toString())
+                              .arg(queryClient.value("address").toString())
+                              .arg(queryClient.value("phone").toString())
+                              .arg(queryOrder.value("montant").toString());
 
     // Create a dialog to display the bill
     QDialog billDialog(this);
-    billDialog.setWindowTitle("Order Bill");
+    billDialog.setWindowTitle("Facture commande");
 
     // Create a QTextBrowser to display the bill
     QTextBrowser *textBrowser = new QTextBrowser(&billDialog);
