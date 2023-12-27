@@ -13,7 +13,6 @@ SOURCES += \
     admin.cpp \
     client.cpp \
     clientwindow.cpp \
-    commande.cpp \
     commandes.cpp \
     db.cpp \
     login.cpp \
@@ -23,14 +22,12 @@ HEADERS += \
     admin.h \
     client.h \
     clientwindow.h \
-    commande.h \
     commandes.h \
     db.h \
     login.h
 
 FORMS += \
     clientwindow.ui \
-    commande.ui \
     login.ui
 
 # Default rules for deployment.
