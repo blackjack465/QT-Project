@@ -1,5 +1,4 @@
 #include "db.h"
-#include "ui_db.h"
 
 #include <QDebug>
 #include <QtSql/QSql>
@@ -11,7 +10,6 @@
 
 Db::Db(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::Db)
 {
     qDebug() << "start";
 
@@ -35,7 +33,6 @@ Db::Db(QWidget *parent)
 
     qDebug() << "end";
 
-    ui->setupUi(this);
 }
 
 Db& Db::instance()
@@ -52,7 +49,6 @@ Db::~Db()
     m_database.close();
 
     qDebug() << "Database closed.";
-    delete ui;
 }
 
 QSqlDatabase Db::getDatabase() const

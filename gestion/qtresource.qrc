@@ -6,5 +6,8 @@
         <file>group.png</file>
         <file>shopping-bag.png</file>
         <file>avatar.png</file>
+        <file>management.png</file>
+        <file>panier.png</file>
+        <file>successful.png</file>
     </qresource>
 </RCC>

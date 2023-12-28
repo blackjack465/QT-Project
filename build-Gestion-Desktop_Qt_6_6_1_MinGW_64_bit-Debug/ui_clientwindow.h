@@ -84,6 +84,7 @@ public:
     QPushButton *AjoutProd;
     QPushButton *SuppProd;
     QPushButton *modifProc;
+    QLabel *title_2;
     QWidget *layoutWidget1;
     QGridLayout *gridLayout;
     QPushButton *ClientButton;
@@ -608,7 +609,7 @@ public:
         page->setObjectName("page");
         horizontalLayoutWidget_3 = new QWidget(page);
         horizontalLayoutWidget_3->setObjectName("horizontalLayoutWidget_3");
-        horizontalLayoutWidget_3->setGeometry(QRect(120, 10, 621, 80));
+        horizontalLayoutWidget_3->setGeometry(QRect(120, 49, 621, 41));
         horizontalLayout_4 = new QHBoxLayout(horizontalLayoutWidget_3);
         horizontalLayout_4->setObjectName("horizontalLayout_4");
         horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
@@ -624,6 +625,7 @@ public:
 "\n"
 "\n"
 ""));
+        Sport->setFrameShape(QFrame::StyledPanel);
         Sport->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_4->addWidget(Sport);
@@ -631,6 +633,7 @@ public:
         Electronique = new QLabel(horizontalLayoutWidget_3);
         Electronique->setObjectName("Electronique");
         Electronique->setStyleSheet(QString::fromUtf8("font: 14pt \"Times New Roman\";"));
+        Electronique->setFrameShape(QFrame::StyledPanel);
         Electronique->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_4->addWidget(Electronique);
@@ -638,6 +641,7 @@ public:
         Beaute = new QLabel(horizontalLayoutWidget_3);
         Beaute->setObjectName("Beaute");
         Beaute->setStyleSheet(QString::fromUtf8("font: 14pt \"Times New Roman\";"));
+        Beaute->setFrameShape(QFrame::StyledPanel);
         Beaute->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_4->addWidget(Beaute);
@@ -724,6 +728,10 @@ public:
 "	border : 1px solid #F0ECE5;\n"
 "    border-radius: 5px;\n"
 "}"));
+        title_2 = new QLabel(page);
+        title_2->setObjectName("title_2");
+        title_2->setGeometry(QRect(10, 10, 191, 20));
+        title_2->setStyleSheet(QString::fromUtf8("font:700 20pt \"Times New Roman\";"));
         stackedWidget->addWidget(page);
         layoutWidget1 = new QWidget(centralwidget);
         layoutWidget1->setObjectName("layoutWidget1");
@@ -870,8 +878,10 @@ public:
         admin->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         logout = new QLabel(centralwidget);
         logout->setObjectName("logout");
-        logout->setGeometry(QRect(730, 10, 121, 21));
-        logout->setStyleSheet(QString::fromUtf8("font: 12pt \"Times New Roman\";\n"
+        logout->setGeometry(QRect(750, 10, 121, 21));
+        logout->setStyleSheet(QString::fromUtf8("\n"
+"font: 12pt \"Times New Roman\";\n"
+"color: rgb(204, 0, 0);\n"
 ""));
         logout->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         imageLabel = new QLabel(centralwidget);
@@ -881,7 +891,7 @@ public:
 
         retranslateUi(ClientWindow);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(ClientWindow);
@@ -914,11 +924,12 @@ public:
         AjoutProd->setText(QCoreApplication::translate("ClientWindow", "+ Ajouter", nullptr));
         SuppProd->setText(QCoreApplication::translate("ClientWindow", "Supprimer", nullptr));
         modifProc->setText(QCoreApplication::translate("ClientWindow", "Modifier", nullptr));
+        title_2->setText(QCoreApplication::translate("ClientWindow", "Produits", nullptr));
         ClientButton->setText(QString());
         CommandeButton->setText(QString());
         CategorieButton->setText(QString());
         AdminButton->setText(QString());
-        logout->setText(QCoreApplication::translate("ClientWindow", "<html><head/><body><p><a href=\"#\"><span style=\" text-decoration: underline; color:#007af4;\">d\303\251connecter</span></a></p></body></html>", nullptr));
+        logout->setText(QCoreApplication::translate("ClientWindow", "<html><head/><body><p><a href=\"#\"><span style=\" text-decoration: underline; color:#f40000;\">d\303\251connecter</span></a></p></body></html>", nullptr));
         imageLabel->setText(QString());
     } // retranslateUi
 

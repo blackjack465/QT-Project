@@ -138,7 +138,7 @@ ClientWindow::ClientWindow(QWidget *parent,const QString& adminName)
     ui->AdminButton->setIconSize(QSize(32, 32));
 
     //logo
-    QPixmap imagePixmap(":/new/icons/shopping-bag.png");
+    QPixmap imagePixmap(":/new/icons/successful.png");
     ui->imageLabel->setPixmap(imagePixmap);
     ui->imageLabel->setScaledContents(true);
 
