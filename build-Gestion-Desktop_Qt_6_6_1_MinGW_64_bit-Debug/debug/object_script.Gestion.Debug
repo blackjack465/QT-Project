@@ -5,6 +5,7 @@ debug/commandes.o
 debug/db.o
 debug/login.o
 debug/main.o
+debug/qrc_qtresource.o
 debug/moc_clientwindow.o
 debug/moc_db.o
 debug/moc_login.o

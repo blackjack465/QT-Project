@@ -1,5 +1,4 @@
 #include "login.h"
-#include "qsqlerror.h"
 #include "ui_login.h"
 #include "ClientWindow.h"
 
@@ -7,19 +6,26 @@
 #include <QLabel>
 #include <QSqlDatabase>
 #include <QSqlQuery>
+#include <QPointer>
+
 
 login::login(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::login)
+    : QMainWindow(parent), ui(new Ui::login)
 {
     ui->setupUi(this);
-
     ui->PassWordlineEdit->setEchoMode(QLineEdit::Password);
 }
 
 login::~login()
 {
+    QSqlDatabase::database().close();
     delete ui;
+}
+
+void login::on_pushButton_clicked()
+{
+    ui->UserlineEdit->clear();
+    ui->PassWordlineEdit->clear();
 }
 
 void login::on_LoginButton_clicked()
@@ -33,27 +39,31 @@ void login::on_LoginButton_clicked()
     query.bindValue(":password", password);
 
     if (query.exec() && query.next()) {
-        // Las credenciales son válidas
+        // Credentials are valid
         qDebug() << "Inicio de sesión exitoso";
+        QString adminName = query.value("Admin_name").toString();
+        qDebug()<<"adminname affecté";
+        // Create ClientWindow on the heap
+        // Create ClientWindow on the heap
+        ClientWindow* clientWindow = new ClientWindow(nullptr, adminName);
+        qDebug() << "ClientWindow constructor called";
+        clientWindow->setAttribute(Qt::WA_DeleteOnClose);  // Auto-delete when closed
 
-        ClientWindow *ClientWindows = new ClientWindow();
-        ClientWindows->show();
 
+        // Connect a slot to handle cleanup when ClientWindow is destroyed
+        connect(clientWindow, &ClientWindow::destroyed, [=]() {
+            // clientWindow is automatically set to nullptr when destroyed
+            qDebug() << "ClientWindow destroyed.";
+        });
+
+        // Show the ClientWindow
+        clientWindow->show();
+
+        // Close the login window
         this->close();
     } else {
-
-        // Las credenciales no son válidas
+        // Credentials are not valid
         qDebug() << "Inicio de sesión fallido";
-        qDebug() << "Error de base de datos: " << query.lastError().text();
+        qDebug() << "Error de base de datos: ";
     }
-
-
 }
-
-
-void login::on_pushButton_clicked()
-{
-    ui->UserlineEdit->clear();
-    ui->PassWordlineEdit->clear();
-}
-

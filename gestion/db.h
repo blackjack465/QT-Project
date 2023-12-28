@@ -1,9 +1,8 @@
-// db.h
 #ifndef DB_H
 #define DB_H
+
 #include <QSqlDatabase>
 #include <QMainWindow>
-#include <QSqlDatabase>
 
 namespace Ui {
 class Db;
@@ -14,9 +13,10 @@ class Db : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit Db(QWidget *parent = nullptr);
+    explicit Db(QWidget *parent);
     ~Db();
 
+    static Db& instance();
     QSqlDatabase getDatabase() const;
 
 private:

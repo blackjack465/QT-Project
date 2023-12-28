@@ -1,6 +1,7 @@
 #include "clientwindow.h"
 #include "ui_clientwindow.h"
 #include "db.h"
+#include "login.h"
 #include <QSqlTableModel>
 #include <QDialog>
 #include <QString>
@@ -16,15 +17,47 @@
 #include <QTextBrowser>
 #include <QPrinter>
 #include <QPrintDialog>
+#include <QDir>
+#include <QIcon>
+#include <QDebug>
 
 
-ClientWindow::ClientWindow(QWidget *parent)
+ClientWindow::ClientWindow(QWidget *parent,const QString& adminName)
     : QMainWindow(parent)
-    , ui(new Ui::ClientWindow)
+    , ui(new Ui::ClientWindow),
+    iconLabel(new QLabel(this))
 {
     ui->setupUi(this);
+    ui->admin->setReadOnly(true);
+    ui->admin->setText(adminName);
+    ui->admin->setStyleSheet(
+        "QLineEdit {"
+        "   background-color: #f0f0f0;"
+        "   color: #333333;"
+        "   border: 1px solid #cccccc;"
+        "   padding: 5px;"
+        "   border-radius: 3px;"
+        "   padding-left: 30px;"
+        "}"
+        "QLabel {"
+        "   position: absolute;"
+        "   top: 6px;"
+        "   left: 6px;"
+        "}"
+        );
+
+    QIcon icon(":/new/icons/person.png");
+    iconLabel->setPixmap(icon.pixmap(20, 20));
+
+    QHBoxLayout *layout = new QHBoxLayout(ui->admin);
+    layout->addWidget(iconLabel);
+    layout->addSpacing(5);
+    connect(ui->logout, &QLabel::linkActivated, this, &ClientWindow::logout);
+
+
  //Client table
-    this->database = new  Db();
+    this->database = &Db::instance();
+
     this->mModel = new QSqlTableModel(database);
 
     mModel->setTable("clients");
@@ -69,7 +102,45 @@ ClientWindow::ClientWindow(QWidget *parent)
 //La page qui se doit afficher en premier
 
     ui->stackedWidget->setCurrentIndex(2);
+    // categorie
+    connect(ui->Sport, &QLabel::linkActivated, this, [=]() {
+        categoryClicked("Sport");
+    });
 
+    connect(ui->Electronique, &QLabel::linkActivated, this, [=]() {
+        categoryClicked("Electronique");
+    });
+
+    connect(ui->Beaute, &QLabel::linkActivated, this, [=]() {
+        categoryClicked("Beauté");
+    });
+
+    this->catmodel= new QSqlTableModel(database);
+    catmodel->setTable("produits");
+    catmodel->select();
+    ui->dynamictable->setModel(catmodel);
+
+    //icon des boutons
+    QIcon icon2(":/new/icons/checkout.png");
+    ui->CommandeButton->setIcon(icon2);
+    ui->CommandeButton->setIconSize(QSize(32, 32));
+
+    QIcon icon3(":/new/icons/category.png");
+    ui->CategorieButton->setIcon(icon3);
+    ui->CategorieButton->setIconSize(QSize(32, 32));
+
+    QIcon icon5(":/new/icons/group.png");
+    ui->ClientButton->setIcon(icon5);
+    ui->ClientButton->setIconSize(QSize(32, 32));
+
+    QIcon icon4(":/new/icons/avatar.png");
+    ui->AdminButton->setIcon(icon4);
+    ui->AdminButton->setIconSize(QSize(32, 32));
+
+    //logo
+    QPixmap imagePixmap(":/new/icons/shopping-bag.png");
+    ui->imageLabel->setPixmap(imagePixmap);
+    ui->imageLabel->setScaledContents(true);
 
 
 }
@@ -122,8 +193,25 @@ ClientWindow::ClientWindow(QWidget *parent)
         {
             ui->stackedWidget->setCurrentIndex(2);
         }
+    //le bouton categorie
+        //Le button Commande
+        void ClientWindow::on_CategorieButton_clicked()
+        {
+            ui->stackedWidget->setCurrentIndex(3);
+        }
 
 
+
+        void ClientWindow::logout()
+        {
+
+            close();
+
+            // Open the login window
+            login *loginWindow = new login();
+            loginWindow->show();
+
+        }
 
 
 //Page des Admins
@@ -145,8 +233,6 @@ ClientWindow::ClientWindow(QWidget *parent)
         {
             AdminModel->select();
         }
-
-
 
 
 //Les button de la page Commande
@@ -367,7 +453,7 @@ ClientWindow::ClientWindow(QWidget *parent)
             }
         }
 
-    //Le button update table Commande
+    // update table Commande
         void ClientWindow::refreshOrderView()
         {
             // Refresh the models to update the displayed data
@@ -474,6 +560,64 @@ ClientWindow::ClientWindow(QWidget *parent)
             billDialog.exec();
         }
 
+        void ClientWindow::categoryClicked(const QString& category)
+        {
+            int categoryId = -1;
+            QSqlQuery queryy;
+            queryy.prepare("SELECT categorie_id FROM categorie WHERE nom_categorie = :categoryName");
+            queryy.bindValue(":categoryName", category);
+
+            // Execute the query to get the category ID
+            if (queryy.exec()) {
+                if (queryy.next()) {
+                    categoryId = queryy.value("categorie_id").toInt();
+                } else {
+                    qDebug() << "Category ID not found for category:" << category;
+                }
+            } else {
+                qDebug() << "Error executing query to get category ID:" << queryy.lastError().text();
+            }
+
+            // Check if a valid category ID was obtained
+            if (categoryId != -1) {
+                QSqlQueryModel *model = new QSqlQueryModel;
+
+                // Execute the query to get products based on the category ID
+                model->setQuery("SELECT * FROM produits WHERE categorie_id = " + QString::number(categoryId));
+
+                // Check if the query was successful
+                if (model->lastError().isValid()) {
+                    qDebug() << "Error executing query to get products:" << model->lastError().text();
+                } else {
+                    // Set the model for the table view
+                    ui->dynamictable->setModel(model);
+                }
+            } else {
+                qDebug() << "Category ID is not valid.";
+            }
+        }
 
 
+
+
+
+
+
+void ClientWindow::on_AjoutProd_clicked()
+{
+    catmodel->insertRow(catmodel->rowCount());
+}
+
+
+void ClientWindow::on_SuppProd_clicked()
+{
+    catmodel->removeRow(ui->dynamictable->currentIndex().row());
+    catmodel->select();
+}
+
+
+void ClientWindow::on_modifProc_clicked()
+{
+    catmodel->select();
+}
 

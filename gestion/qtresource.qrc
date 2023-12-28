@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/new/icons">
+        <file>person.png</file>
+        <file>category.png</file>
+        <file>checkout.png</file>
+        <file>group.png</file>
+        <file>shopping-bag.png</file>
+        <file>avatar.png</file>
+    </qresource>
+</RCC>

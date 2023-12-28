@@ -2,7 +2,7 @@
 #define CLIENTWINDOW_H
 #include "db.h"
 #include <QSqlTableModel>
-
+#include <QLabel>
 #include <QMainWindow>
 
 namespace Ui {
@@ -14,11 +14,12 @@ class ClientWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit ClientWindow(QWidget *parent = nullptr);
+    explicit ClientWindow(QWidget *parent = nullptr,const QString& adminName="");
     ~ClientWindow();
     Db *database;
     QSqlTableModel *mModel;
     QSqlTableModel *AdminModel;
+    QSqlTableModel *catmodel;
     QSqlQueryModel* CommandeModel;
     QSqlQueryModel* CommandeModel1;
     QSqlQueryModel* CommandeModel2;
@@ -64,9 +65,20 @@ private slots:
     void refreshOrderView();
 
     void on_facture_clicked();
+    void logout();
+
+    void categoryClicked(const QString& );
+    void on_CategorieButton_clicked();
+
+    void on_AjoutProd_clicked();
+
+    void on_SuppProd_clicked();
+
+    void on_modifProc_clicked();
 
 private:
     Ui::ClientWindow *ui;
+    QLabel *iconLabel;
 };
 
 #endif // CLIENTWINDOW_H
