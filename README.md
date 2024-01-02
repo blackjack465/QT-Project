@@ -25,7 +25,7 @@ The primary objectives of this project include:
 
 1. Clone the repository: `git clone https://github.com/your-username/QT-Project.git`
 2. Open the project in Qt Creator
-3. Change the builder file in QT Cretor in the sytings of the project to the builder file in the project
+3. Change the builder file in QT Creator to the builder file in the project
 4. And compile
 
 ## Usage
