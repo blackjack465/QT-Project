@@ -1,4 +1,4 @@
-# Project Title
+# E-commerce order management
 
 Welcome to my inaugural project using Qt
 
@@ -24,7 +24,7 @@ The primary objectives of this project include:
 ### Installation
 
 1. Clone the repository: `git clone https://github.com/your-username/your-project.git`
-2. Navigate to the project directory: `cd your-project`
+2. Navigate to the project directory: `cd `
 3. Build the project using Qt: `qmake && make`
 
 ## Usage
