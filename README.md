@@ -23,13 +23,15 @@ The primary objectives of this project include:
 
 ### Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/your-project.git`
-2. Navigate to the project directory: `cd `
-3. Build the project using Qt: `qmake && make`
+1. Clone the repository: `git clone https://github.com/your-username/QT-Project.git`
+2. Open the project in Qt Creator
+3. Change the builder file in QT Cretor in the sytings of the project to the builder file in the project
+4. And compile
 
 ## Usage
+***UserName:*** Abder 
 
-Provide instructions on how to use or run the application. Include any relevant screenshots or examples.
+***password:*** 123
 
 ## Contributing
 
@@ -37,16 +39,16 @@ If you'd like to contribute, please fork the repository and create a pull reques
 
 ## License
 
-This project is licensed under the [License Name] - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the [No License] 
 
 ## Acknowledgments
 
-- Mention any libraries or resources you used.
-- Give credit to contributors or inspirations.
+- No externe library.
+- All the library used in the project are from QT.
 
 ## Contact
 
-[Your Name]
-- [Email](mailto:your.email@example.com)
-- [LinkedIn](https://www.linkedin.com/in/your-username/)
-- [Twitter](https://twitter
+[Abderrahim EL Ouariachi]
+- [Email](mailto:abderahimouriachi@gmail.com)
+- [Academic Email](mailto:abderrahim.elouariachi21@ump.ac.ma)
+- [LinkedIn](https://www.linkedin.com/in/Abderrahim-El-Ouariachi/)
